@@ -25,4 +25,4 @@ To be added...
 [pixyzehn](https://github.com/pixyzehn)
 
 ## License
-[MIT License]()
+[MIT License](https://github.com/pixyzehn/stodo/blob/master/LICENSE)
