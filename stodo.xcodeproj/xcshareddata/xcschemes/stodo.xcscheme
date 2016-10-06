@@ -38,6 +38,16 @@
                ReferencedContainer = "container:stodo.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BF7875CA1DA5B9EF0009BDA2"
+               BuildableName = "stodoTests.xctest"
+               BlueprintName = "stodoTests"
+               ReferencedContainer = "container:stodo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
