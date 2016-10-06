@@ -13,12 +13,12 @@ import StodoKit
 public struct VersionCommand: CommandProtocol {
     public typealias Options = NoOptions<StodoError>
     public typealias ClientError = StodoError
-    
+
     public let verb = "version"
     public let function = "Display the current stodo"
-    
+
     public func run(_ options: Options) -> Result<(), ClientError> {
-        if let version = StodoKitBundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
+        if let version = stodoKitBundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
             print("\(version)")
             return .success(())
         } else {

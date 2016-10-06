@@ -13,10 +13,10 @@ import StodoKit
 public struct ListCommand: CommandProtocol {
     public typealias Options = NoOptions<StodoError>
     public typealias ClientError = StodoError
-    
+
     public let verb = "list"
     public let function = "Show a list of your tasks"
-    
+
     public func run(_ options: Options) -> Result<(), ClientError> {
         let todos = Todo.list()
         switch todos {

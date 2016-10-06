@@ -6,35 +6,36 @@
 //  Copyright © 2016 Hiroki Nagasawa. All rights reserved.
 //
 
+import Foundation
 import Result
 
-public let StodoKitBundle = Bundle(for: Todo.self)
+public let stodoKitBundle = Bundle(for: Todo.self)
 
 public class Todo: NSObject, NSCoding, FileType {
     public var id: Int = 0
     public var title: String = ""
     public var isDone: Bool = false
-    
-    init(id: Int, title: String, isDone: Bool = false)  {
+
+    init(id: Int, title: String, isDone: Bool = false) {
         super.init()
         self.id = id
         self.title = title
         self.isDone = isDone
     }
-    
+
     public required init?(coder aDecoder: NSCoder) {
         super.init()
         self.id = aDecoder.decodeInteger(forKey: "ID")
         self.title = aDecoder.decodeObject(forKey: "TITLE") as! String
         self.isDone = aDecoder.decodeBool(forKey: "ISDONE")
     }
-    
+
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(id, forKey: "ID")
         aCoder.encode(title, forKey: "TITLE")
         aCoder.encode(isDone, forKey: "ISDONE")
     }
-    
+
     static var savedTodos: [Todo] {
         get {
             let todos = KeyedArchiver.unarchive(path: fullPath)
@@ -61,7 +62,7 @@ extension Todo: ActionType {
         }
         return .success(savedTodos)
     }
-    
+
     public static func add(title: String) -> Result<(), StodoError> {
         if title.isEmpty {
             return .failure(StodoError.addError(failureReason: "Could not fine the title."))
@@ -78,10 +79,10 @@ extension Todo: ActionType {
         savedTodos = todos
         return .success()
     }
-    
+
     public static func done(at target: Int) -> Result<(), StodoError> {
         let todos = savedTodos
-        let todo = todos.filter{ $0.id == target }.first
+        let todo = todos.filter { $0.id == target }.first
         if let todo = todo {
             todo.isDone = true
         } else {
@@ -90,10 +91,10 @@ extension Todo: ActionType {
         savedTodos = todos
         return .success()
     }
-    
+
     public static func undone(at target: Int) -> Result<(), StodoError> {
         let todos = savedTodos
-        let todo = todos.filter{ $0.id == target }.first
+        let todo = todos.filter { $0.id == target }.first
         if let todo = todo {
             todo.isDone = false
         } else {
@@ -102,10 +103,10 @@ extension Todo: ActionType {
         savedTodos = todos
         return .success()
     }
-    
+
     public static func delete(at target: Int) -> Result<(), StodoError> {
         var todos = savedTodos
-        let todo = todos.filter{ $0.id == target }.first
+        let todo = todos.filter { $0.id == target }.first
         if let todo = todo, let index = todos.index(of: todo) {
             todos.remove(at: index)
         } else {

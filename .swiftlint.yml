@@ -1,0 +1,13 @@
+included:
+  - Source
+disabled_rules:
+  - type_name
+  - nesting
+  - line_length
+  - force_try
+  - force_cast
+variable_name:
+  excluded:
+    - m
+    - id
+

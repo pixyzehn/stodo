@@ -13,11 +13,11 @@ import StodoKit
 public struct UndoneOptions: OptionsProtocol {
     public typealias ClientError = StodoError
     let target: Int
-    
+
     static func undone(_ target: Int) -> UndoneOptions {
         return self.init(target: target)
     }
-    
+
     public static func evaluate(_ m: CommandMode) -> Result<UndoneOptions, CommandantError<ClientError>> {
         return undone
             <*> m <| Argument(usage: "Task id to check undone")
@@ -27,10 +27,10 @@ public struct UndoneOptions: OptionsProtocol {
 public struct UndoneCommand: CommandProtocol {
     public typealias Options = UndoneOptions
     public typealias ClientError = StodoError
-    
+
     public let verb = "undone"
     public let function = "Remove done mark"
-    
+
     public func run(_ options: Options) -> Result<(), ClientError> {
         switch Todo.undone(at: options.target) {
         case .success(_):
