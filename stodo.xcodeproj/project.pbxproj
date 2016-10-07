@@ -23,9 +23,14 @@
 		BF7876021DA5DFF30009BDA2 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875FD1DA5DFF30009BDA2 /* FileType.swift */; };
 		BF7876041DA5DFF30009BDA2 /* KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875FF1DA5DFF30009BDA2 /* KeyedArchiver.swift */; };
 		BF7876051DA5DFF30009BDA2 /* Stodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7876001DA5DFF30009BDA2 /* Stodo.swift */; };
-		BF7876091DA5DFFF0009BDA2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF7876071DA5DFFF0009BDA2 /* Info.plist */; };
 		BF78760A1DA5DFFF0009BDA2 /* StodoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7876081DA5DFFF0009BDA2 /* StodoKitTests.swift */; };
 		BF78760D1DA5E09C0009BDA2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78760C1DA5E09C0009BDA2 /* Errors.swift */; };
+		BFC594B31DA7146A00F6D7DF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; };
+		BFC594B41DA7146A00F6D7DF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B21DA7146A00F6D7DF /* Quick.framework */; };
+		BFC594BB1DA71D1D00F6D7DF /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BFC594BC1DA71D1D00F6D7DF /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC594B21DA7146A00F6D7DF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BFC594BD1DA71D1D00F6D7DF /* Commandant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BFC594BE1DA71D1D00F6D7DF /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFC594BA1DA71D1200F6D7DF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BFC594BB1DA71D1D00F6D7DF /* Nimble.framework in CopyFiles */,
+				BFC594BC1DA71D1D00F6D7DF /* Quick.framework in CopyFiles */,
+				BFC594BD1DA71D1D00F6D7DF /* Commandant.framework in CopyFiles */,
+				BFC594BE1DA71D1D00F6D7DF /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +107,8 @@
 		BF7876071DA5DFFF0009BDA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/StodoKitTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		BF7876081DA5DFFF0009BDA2 /* StodoKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StodoKitTests.swift; path = Source/StodoKitTests/StodoKitTests.swift; sourceTree = SOURCE_ROOT; };
 		BF78760C1DA5E09C0009BDA2 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Source/StodoKit/Errors.swift; sourceTree = SOURCE_ROOT; };
+		BFC594B11DA7146A00F6D7DF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		BFC594B21DA7146A00F6D7DF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +134,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */,
+				BFC594B31DA7146A00F6D7DF /* Nimble.framework in Frameworks */,
+				BFC594B41DA7146A00F6D7DF /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +199,8 @@
 		BF7875B61DA5B3700009BDA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFC594B11DA7146A00F6D7DF /* Nimble.framework */,
+				BFC594B21DA7146A00F6D7DF /* Quick.framework */,
 				BF7875B71DA5B3700009BDA2 /* Commandant.framework */,
 				BF7875B81DA5B3700009BDA2 /* Result.framework */,
 			);
@@ -254,8 +278,10 @@
 			buildConfigurationList = BF7875B31DA5B2950009BDA2 /* Build configuration list for PBXNativeTarget "StodoKitTests" */;
 			buildPhases = (
 				BF78759C1DA5B2950009BDA2 /* Sources */,
+				BFC594BA1DA71D1200F6D7DF /* CopyFiles */,
 				BF78759D1DA5B2950009BDA2 /* Frameworks */,
 				BF78759E1DA5B2950009BDA2 /* Resources */,
+				BFC594B61DA7199E00F6D7DF /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,7 +363,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF7876091DA5DFFF0009BDA2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +414,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		BFC594B61DA7199E00F6D7DF /* carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Nimble.framework",
+			);
+			name = "carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -645,8 +686,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MGYF33XF8F;
-				INFOPLIST_FILE = StodoKitTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Source/StodoKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				ORDER_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.StodoKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -659,8 +705,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MGYF33XF8F;
-				INFOPLIST_FILE = StodoKitTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Source/StodoKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				ORDER_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.StodoKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

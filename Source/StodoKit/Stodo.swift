@@ -82,37 +82,43 @@ extension Todo: ActionType {
 
     public static func done(at target: Int) -> Result<(), StodoError> {
         let todos = savedTodos
-        let todo = todos.filter { $0.id == target }.first
-        if let todo = todo {
-            todo.isDone = true
+        let ids = todos.map { $0.id }
+        if ids.contains(target) {
+            todos.filter { $0.id == target }.first?.isDone = true
+            savedTodos = todos
+            return .success()
         } else {
             return .failure(StodoError.doneError(failureReason: "Could not find the task."))
         }
-        savedTodos = todos
-        return .success()
     }
 
     public static func undone(at target: Int) -> Result<(), StodoError> {
         let todos = savedTodos
-        let todo = todos.filter { $0.id == target }.first
-        if let todo = todo {
-            todo.isDone = false
+        let ids = todos.map { $0.id }
+        if ids.contains(target) {
+            todos.filter { $0.id == target }.first?.isDone = false
+            savedTodos = todos
+            return .success()
         } else {
             return .failure(StodoError.undoneError(failureReason: "Could not find the task."))
         }
-        savedTodos = todos
-        return .success()
     }
 
     public static func delete(at target: Int) -> Result<(), StodoError> {
         var todos = savedTodos
-        let todo = todos.filter { $0.id == target }.first
-        if let todo = todo, let index = todos.index(of: todo) {
-            todos.remove(at: index)
+        let ids = todos.map { $0.id }
+        if ids.contains(target) {
+            let todo = todos.filter { $0.id == target }.first
+            if let todo = todo, let index = todos.index(of: todo) {
+                todos.remove(at: index)
+            } else {
+                return .failure(StodoError.deleteError(failureReason: "Could not remove the task."))
+            }
+            savedTodos = todos
+            return .success()
+
         } else {
             return .failure(StodoError.deleteError(failureReason: "Could not find the task."))
         }
-        savedTodos = todos
-        return .success()
     }
 }
