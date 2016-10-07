@@ -2,7 +2,7 @@ EXECUTABLE_NAME=stodo
 SCHEME_NAME=stodo
 WORKSPACE_NAME=stodo.xcworkspace
 IDENTIFIER=com.pixyzehn.stodo
-COMPONENTS_PLIST=stodo/Components.plist
+COMPONENTS_PLIST=Source/stodo/Components.plist
 
 TEMPORARY_FOLDER?=/tmp/$(SCHEME_NAME).dst
 PREFIX?=/usr/local
