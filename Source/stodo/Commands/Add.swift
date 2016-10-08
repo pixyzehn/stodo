@@ -35,6 +35,7 @@ public struct AddCommand: CommandProtocol {
         let title = options.title
         switch Todo.add(title: title) {
         case .success(_):
+            _ = ListCommand().run(ListOptions())
             return .success()
         case .failure(let error):
             return .failure(error)

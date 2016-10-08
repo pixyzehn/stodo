@@ -28,10 +28,10 @@ $ stodo list
 [ ] 003: Grab coffee with Satoshi
 ```
 #### List options
-- `-m` : Show todo list by markdown.
-- `-t` : Show todo list with `createdAt` or `updatedAt`.
-- `-x` : Show only done tasks.
-- `-xx` : Show only undone tasks.
+- `-m` or `--markdown` : Show todo list by markdown.
+- `-t` or `--time` : Show todo list with `createdAt` or `updatedAt`.
+- `-d` or `--done` : Show only done tasks.
+- `-u` or `--undone` : Show only undone tasks.
 
 ### Add
 ```

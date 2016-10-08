@@ -15,12 +15,15 @@ public class Todo: NSObject, NSCoding {
     public var id: Int = 0
     public var title: String = ""
     public var isDone: Bool = false
+    public var createdAt: TimeInterval = 0
+    public var updatedAt: TimeInterval = 0
 
     init(id: Int, title: String, isDone: Bool = false) {
         super.init()
         self.id = id
         self.title = title
         self.isDone = isDone
+        self.createdAt = Date().timeIntervalSince1970
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -28,12 +31,16 @@ public class Todo: NSObject, NSCoding {
         self.id = aDecoder.decodeInteger(forKey: "id")
         self.title = aDecoder.decodeObject(forKey: "title") as! String
         self.isDone = aDecoder.decodeBool(forKey: "isdone")
+        self.createdAt = aDecoder.decodeDouble(forKey: "createdat")
+        self.updatedAt = aDecoder.decodeDouble(forKey: "updatedat")
     }
 
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(id, forKey: "id")
         aCoder.encode(title, forKey: "title")
         aCoder.encode(isDone, forKey: "isdone")
+        aCoder.encode(createdAt, forKey: "createdat")
+        aCoder.encode(updatedAt, forKey: "updatedat")
     }
 
     static var savedTodos: [Todo] {
@@ -55,7 +62,8 @@ extension Todo: FileType {
 }
 
 public protocol ActionType {
-    static func list() -> Result<[Todo], StodoError>
+    associatedtype Response
+    static func list() -> Result<Response, StodoError>
     static func add(title: String) -> Result<(), StodoError>
     static func done(at target: Int) -> Result<(), StodoError>
     static func undone(at target: Int) -> Result<(), StodoError>
@@ -63,7 +71,9 @@ public protocol ActionType {
 }
 
 extension Todo: ActionType {
-    public static func list() -> Result<[Todo], StodoError> {
+    public typealias Response = [Todo]
+
+    public static func list() -> Result<Response, StodoError> {
         if savedTodos.isEmpty {
             return .failure(StodoError.listError(failureReason: "Todo is empty."))
         }
@@ -96,6 +106,7 @@ extension Todo: ActionType {
         let ids = todos.map { $0.id }
         if ids.contains(target) {
             todos.filter { $0.id == target }.first?.isDone = true
+            todos.filter { $0.id == target }.first?.updatedAt = Date().timeIntervalSince1970
             savedTodos = todos
             return .success()
         } else {
@@ -108,6 +119,7 @@ extension Todo: ActionType {
         let ids = todos.map { $0.id }
         if ids.contains(target) {
             todos.filter { $0.id == target }.first?.isDone = false
+            todos.filter { $0.id == target }.first?.updatedAt = Date().timeIntervalSince1970
             savedTodos = todos
             return .success()
         } else {
@@ -127,7 +139,6 @@ extension Todo: ActionType {
             }
             savedTodos = todos
             return .success()
-
         } else {
             return .failure(StodoError.deleteError(failureReason: "Could not find the task."))
         }
