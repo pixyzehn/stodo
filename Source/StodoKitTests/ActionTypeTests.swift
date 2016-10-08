@@ -1,6 +1,6 @@
 //
-//  StodoKitTests.swift
-//  StodoKitTests
+//  ActionTypeTests.swift
+//  ActionTypeTests
 //
 //  Created by Hiroki Nagasawa on 10/6/16.
 //  Copyright © 2016 Hiroki Nagasawa. All rights reserved.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 @testable import StodoKit
 
-class StodoKitTests: QuickSpec {
+class ActionTypeTests: QuickSpec {
     override func spec() {
         beforeEach {
             TodoTests.addNewFileForTests()
@@ -105,63 +105,28 @@ class StodoKitTests: QuickSpec {
 
             it("undone a task") {
                 let target = 1
-                _ = TodoTests.done(at: target)
-                if let todo = TodoTests.get(id: target) {
-                    expect(todo.isDone).to(beTrue())
-                } else {
-                    fatalError("Could not find the task.")
-                }
-
-                switch TodoTests.undone(at: target) {
-                case .success():
+                switch TodoTests.done(at: target) {
+                case .success(_):
                     if let todo = TodoTests.get(id: target) {
-                        expect(todo.isDone).to(beFalse())
+                        expect(todo.isDone).to(beTrue())
                     } else {
-                        fatalError("Could not find the task.")
+                        fatalError("Could not done the task.")
+                    }
+
+                    switch TodoTests.undone(at: target) {
+                    case .success():
+                        if let todo = TodoTests.get(id: target) {
+                            expect(todo.isDone).to(beFalse())
+                        } else {
+                            fatalError("Could not undone the task.")
+                        }
+                    case .failure(let error):
+                        print("\(error)")
                     }
                 case .failure(let error):
                     print("\(error)")
                 }
             }
         }
-    }
-}
-
-// MARK: Helper
-
-public class TodoTests: Todo {}
-
-extension TodoTests {
-    public override class var rootURL: URL {
-        return URL(fileURLWithPath: NSTemporaryDirectory().appending(fileName), isDirectory: true)
-    }
-}
-
-extension TodoTests {
-    fileprivate static func get(id: Int) -> Todo? {
-        return savedTodos.filter { $0.id == id }.first
-    }
-
-    fileprivate static func addNewFileForTests() {
-        if !fileManager.fileExists(atPath: fullPath) {
-            fileManager.createFile(atPath: fullPath, contents: nil, attributes: nil)
-        }
-    }
-
-    fileprivate static func deleteFileForTests() {
-        if fileManager.fileExists(atPath: fullPath) {
-            do {
-                try fileManager.removeItem(atPath: fullPath)
-            } catch(let error) {
-                print("\(error)")
-            }
-        }
-    }
-
-    fileprivate static func addFixturesForTests() {
-        let todo1 = Todo(id: 1, title: "todo_test_1")
-        let todo2 = Todo(id: 2, title: "todo_test_2")
-        let todo3 = Todo(id: 3, title: "todo_test_3")
-        savedTodos = [todo1, todo2, todo3]
     }
 }

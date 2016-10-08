@@ -48,7 +48,7 @@ extension Todo {
     static var savedTodos: [Todo] {
         get {
             let todos = KeyedArchiver.unarchive(path: fullPath)
-            return todos ?? []
+            return todos
         }
         set {
             KeyedArchiver.archive(todos: newValue, path: fullPath)

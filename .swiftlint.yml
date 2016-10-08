@@ -14,4 +14,4 @@ variable_name:
 function_body_length:
   warning: 100
 cyclomatic_complexity:
-  warning: 20
+  warning: 30
