@@ -13,6 +13,10 @@
 		BF044E1E1DA937150070F2BD /* KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E1C1DA937150070F2BD /* KeyedArchiverTests.swift */; };
 		BF044E1F1DA937150070F2BD /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E1D1DA937150070F2BD /* TodoTests.swift */; };
 		BF044E241DA9B3100070F2BD /* StodoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7876011DA5DFF30009BDA2 /* StodoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF044E251DA9B9670070F2BD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; };
+		BF044E261DA9B9670070F2BD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B21DA7146A00F6D7DF /* Quick.framework */; };
+		BF044E271DA9B9860070F2BD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; };
+		BF044E281DA9B9860070F2BD /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; };
 		BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AE1DA5B2950009BDA2 /* StodoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -127,6 +131,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF044E271DA9B9860070F2BD /* Nimble.framework in Frameworks */,
+				BF044E281DA9B9860070F2BD /* Commandant.framework in Frameworks */,
+				BF044E251DA9B9670070F2BD /* Result.framework in Frameworks */,
+				BF044E261DA9B9670070F2BD /* Quick.framework in Frameworks */,
 				BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
