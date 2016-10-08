@@ -40,8 +40,7 @@ public struct ListCommand: CommandProtocol {
     public let function = "Show a list of your tasks"
 
     public func run(_ options: Options) -> Result<(), ClientError> {
-        let todos = Todo.list()
-        switch todos {
+        switch Todo.list() {
         case .success(let todos):
             let maxTitleLength = todos.map { $0.title.characters.count }.max() ?? 0
 
@@ -59,8 +58,9 @@ public struct ListCommand: CommandProtocol {
                     let space = maxTitleLength - todo.title.characters.count + 1
                     let spaceString = String(repeating: " ", count: space)
                     output += todo.updatedAt == 0 ?
-                        "\(spaceString) | \(todo.createdAt.toDate())" : "\(spaceString) | \(todo.updatedAt.toDate())"
+                        "\(spaceString) | \(todo.createdAt.toDateString())" : "\(spaceString) | \(todo.updatedAt.toDateString())"
                 }
+
                 print("\(output)")
             }
             return .success()
@@ -71,7 +71,7 @@ public struct ListCommand: CommandProtocol {
 }
 
 fileprivate extension TimeInterval {
-    func toDate() -> String {
+    func toDateString() -> String {
         let date = Date(timeIntervalSince1970: self)
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")

@@ -33,7 +33,7 @@ public struct AddCommand: CommandProtocol {
     public typealias ClientError = StodoError
 
     public let verb = "add"
-    public let function = "Add a new task if it exists"
+    public let function = "Create a new task"
 
     public func run(_ options: Options) -> Result<(), ClientError> {
         let title = options.title

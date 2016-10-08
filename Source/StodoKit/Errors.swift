@@ -19,29 +19,6 @@ public enum StodoError: Error {
 }
 
 public extension StodoError {
-    public var failureReason: String {
-        switch self {
-        case .addError(let failureReason):
-            return failureReason
-        case .deleteError(let failureReason):
-            return failureReason
-        case .doneError(let failureReason):
-            return failureReason
-        case .listError(let failureReason):
-            return failureReason
-        case .moveError(let failureReason):
-            return failureReason
-        case .renameError(let failureReason):
-            return failureReason
-        case .resetError(let failureReason):
-            return failureReason
-        case .undoneError(let failureReason):
-            return failureReason
-        case .versionError(let failureReason):
-            return failureReason
-        }
-    }
-
     public var description: String {
         switch self {
         case .addError(let failureReason):

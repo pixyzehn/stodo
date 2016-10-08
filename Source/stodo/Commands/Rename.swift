@@ -23,8 +23,8 @@ public struct RenameOptions: OptionsProtocol {
     
     public static func evaluate(_ m: CommandMode) -> Result<RenameOptions, CommandantError<ClientError>> {
         return rename
-            <*> m <| Argument(usage: "Task id to move from")
-            <*> m <| Argument(usage: "Task id to move to")
+            <*> m <| Argument(usage: "Task id to rename")
+            <*> m <| Argument(usage: "New title")
     }
 }
 

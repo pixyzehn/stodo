@@ -42,7 +42,9 @@ public class Todo: NSObject, NSCoding {
         aCoder.encode(createdAt, forKey: "createdat")
         aCoder.encode(updatedAt, forKey: "updatedat")
     }
+}
 
+extension Todo {
     static var savedTodos: [Todo] {
         get {
             let todos = KeyedArchiver.unarchive(path: fullPath)
@@ -51,6 +53,12 @@ public class Todo: NSObject, NSCoding {
         set {
             KeyedArchiver.archive(todos: newValue, path: fullPath)
         }
+    }
+
+    static func contains(target: Int) -> Bool {
+        let todos = savedTodos
+        let ids = todos.map { $0.id }
+        return ids.contains(target)
     }
 }
 
@@ -63,25 +71,18 @@ extension Todo: FileType {
 
 public protocol ActionType {
     associatedtype Response
-    static func list() -> Result<Response, StodoError>
     static func add(title: String, isDone: Bool) -> Result<(), StodoError>
-    static func done(at target: Int) -> Result<(), StodoError>
-    static func undone(at target: Int) -> Result<(), StodoError>
     static func delete(at target: Int) -> Result<(), StodoError>
+    static func done(at target: Int) -> Result<(), StodoError>
+    static func list() -> Result<Response, StodoError>
     static func move(from fromTarget: Int, to toTarget: Int) -> Result<(), StodoError>
     static func rename(at target: Int, name: String) -> Result<(), StodoError>
     static func reset() -> Result<(), StodoError>
+    static func undone(at target: Int) -> Result<(), StodoError>
 }
 
 extension Todo: ActionType {
     public typealias Response = [Todo]
-
-    public static func list() -> Result<Response, StodoError> {
-        if savedTodos.isEmpty {
-            return .failure(StodoError.listError(failureReason: "Todo is empty."))
-        }
-        return .success(savedTodos)
-    }
 
     public static func add(title: String, isDone: Bool = false) -> Result<(), StodoError> {
         if title.isEmpty {
@@ -94,7 +95,6 @@ extension Todo: ActionType {
             let todos: [Todo] = [todo]
             let data = KeyedArchiver.archive(todos: todos)
             fileManager.createFile(atPath: fullPath, contents: data, attributes: nil)
-            return .success()
         } else {
             var todos = savedTodos
             let maxId = todos.map {$0.id}.max() ?? 0
@@ -102,14 +102,20 @@ extension Todo: ActionType {
             todo.isDone = isDone
             todos.append(todo)
             savedTodos = todos
-            return .success()
         }
+        return .success()
+    }
+
+    public static func list() -> Result<Response, StodoError> {
+        if savedTodos.isEmpty {
+            return .failure(StodoError.listError(failureReason: "Todo list is empty. Add task by `stodo add`."))
+        }
+        return .success(savedTodos)
     }
 
     public static func done(at target: Int) -> Result<(), StodoError> {
-        let todos = savedTodos
-        let ids = todos.map { $0.id }
-        if ids.contains(target) {
+        if Todo.contains(target: target) {
+            let todos = savedTodos
             todos.filter { $0.id == target }.first?.isDone = true
             todos.filter { $0.id == target }.first?.updatedAt = Date().timeIntervalSince1970
             savedTodos = todos
@@ -120,9 +126,8 @@ extension Todo: ActionType {
     }
 
     public static func undone(at target: Int) -> Result<(), StodoError> {
-        let todos = savedTodos
-        let ids = todos.map { $0.id }
-        if ids.contains(target) {
+        if Todo.contains(target: target) {
+            let todos = savedTodos
             todos.filter { $0.id == target }.first?.isDone = false
             todos.filter { $0.id == target }.first?.updatedAt = Date().timeIntervalSince1970
             savedTodos = todos
@@ -133,9 +138,8 @@ extension Todo: ActionType {
     }
 
     public static func delete(at target: Int) -> Result<(), StodoError> {
-        var todos = savedTodos
-        let ids = todos.map { $0.id }
-        if ids.contains(target) {
+        if Todo.contains(target: target) {
+            var todos = savedTodos
             let todo = todos.filter { $0.id == target }.first
             if let todo = todo, let index = todos.index(of: todo) {
                 todos.remove(at: index)
@@ -164,9 +168,8 @@ extension Todo: ActionType {
     }
 
     public static func rename(at target: Int, name: String) -> Result<(), StodoError> {
-        let todos = savedTodos
-        let ids = todos.map { $0.id }
-        if ids.contains(target) {
+        if Todo.contains(target: target) {
+            let todos = savedTodos
             todos.filter { $0.id == target }.first?.title = name
             savedTodos = todos
             return .success()
