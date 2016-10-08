@@ -12,5 +12,4 @@ matrix:
     osx_image: xcode8
     script:
     - swiftlint
-    - set -o pipefail && xcodebuild clean build -project stodo.xcodeproj -scheme stodo -destination 'platform=macOS' | xcpretty -c
-    - set -o pipefail && xcodebuild test -project stodo.xcodeproj -scheme StodoKitTests -destination 'platform=macOS' | xcpretty -c
+    - set -o pipefail && xcodebuild clean build test -project stodo.xcodeproj -scheme stodo -destination 'platform=macOS' | xcpretty -c

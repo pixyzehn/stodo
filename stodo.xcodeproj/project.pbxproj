@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF044E131DA91A430070F2BD /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E101DA91A430070F2BD /* Move.swift */; };
-		BF044E141DA91A430070F2BD /* Rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E111DA91A430070F2BD /* Rename.swift */; };
-		BF044E151DA91A430070F2BD /* Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E121DA91A430070F2BD /* Reset.swift */; };
 		BF044E1E1DA937150070F2BD /* KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E1C1DA937150070F2BD /* KeyedArchiverTests.swift */; };
 		BF044E1F1DA937150070F2BD /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E1D1DA937150070F2BD /* TodoTests.swift */; };
 		BF044E241DA9B3100070F2BD /* StodoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7876011DA5DFF30009BDA2 /* StodoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF044E251DA9B9670070F2BD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; };
-		BF044E261DA9B9670070F2BD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B21DA7146A00F6D7DF /* Quick.framework */; };
-		BF044E271DA9B9860070F2BD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; };
-		BF044E281DA9B9860070F2BD /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; };
+		BF044E291DA9BB700070F2BD /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875E91DA5DFD60009BDA2 /* Add.swift */; };
+		BF044E2A1DA9BB700070F2BD /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EA1DA5DFD60009BDA2 /* Delete.swift */; };
+		BF044E2B1DA9BB700070F2BD /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EB1DA5DFD60009BDA2 /* Done.swift */; };
+		BF044E2C1DA9BB700070F2BD /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EC1DA5DFD60009BDA2 /* List.swift */; };
+		BF044E2D1DA9BB700070F2BD /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E101DA91A430070F2BD /* Move.swift */; };
+		BF044E2E1DA9BB700070F2BD /* Rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E111DA91A430070F2BD /* Rename.swift */; };
+		BF044E2F1DA9BB700070F2BD /* Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E121DA91A430070F2BD /* Reset.swift */; };
+		BF044E301DA9BB700070F2BD /* Undone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875ED1DA5DFD60009BDA2 /* Undone.swift */; };
+		BF044E311DA9BB700070F2BD /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EE1DA5DFD60009BDA2 /* Version.swift */; };
+		BF044E321DA9BB9E0070F2BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875F81DA5DFDF0009BDA2 /* main.swift */; };
 		BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AE1DA5B2950009BDA2 /* StodoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF7875B91DA5B3700009BDA2 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; };
 		BF7875BA1DA5B3700009BDA2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; };
-		BF7875EF1DA5DFD60009BDA2 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875E91DA5DFD60009BDA2 /* Add.swift */; };
-		BF7875F01DA5DFD60009BDA2 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EA1DA5DFD60009BDA2 /* Delete.swift */; };
-		BF7875F11DA5DFD60009BDA2 /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EB1DA5DFD60009BDA2 /* Done.swift */; };
-		BF7875F21DA5DFD60009BDA2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EC1DA5DFD60009BDA2 /* List.swift */; };
-		BF7875F31DA5DFD60009BDA2 /* Undone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875ED1DA5DFD60009BDA2 /* Undone.swift */; };
-		BF7875F41DA5DFD60009BDA2 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EE1DA5DFD60009BDA2 /* Version.swift */; };
 		BF7875F91DA5DFDF0009BDA2 /* Components.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF7875F51DA5DFDF0009BDA2 /* Components.plist */; };
-		BF7875FC1DA5DFDF0009BDA2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875F81DA5DFDF0009BDA2 /* main.swift */; };
 		BF7876021DA5DFF30009BDA2 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875FD1DA5DFF30009BDA2 /* FileType.swift */; };
 		BF7876041DA5DFF30009BDA2 /* KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875FF1DA5DFF30009BDA2 /* KeyedArchiver.swift */; };
 		BF7876051DA5DFF30009BDA2 /* Stodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7876001DA5DFF30009BDA2 /* Stodo.swift */; };
@@ -131,10 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF044E271DA9B9860070F2BD /* Nimble.framework in Frameworks */,
-				BF044E281DA9B9860070F2BD /* Commandant.framework in Frameworks */,
-				BF044E251DA9B9670070F2BD /* Result.framework in Frameworks */,
-				BF044E261DA9B9670070F2BD /* Quick.framework in Frameworks */,
 				BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,16 +455,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF7875F31DA5DFD60009BDA2 /* Undone.swift in Sources */,
-				BF7875F11DA5DFD60009BDA2 /* Done.swift in Sources */,
-				BF7875F41DA5DFD60009BDA2 /* Version.swift in Sources */,
-				BF044E141DA91A430070F2BD /* Rename.swift in Sources */,
-				BF7875F01DA5DFD60009BDA2 /* Delete.swift in Sources */,
-				BF7875F21DA5DFD60009BDA2 /* List.swift in Sources */,
-				BF7875FC1DA5DFDF0009BDA2 /* main.swift in Sources */,
-				BF7875EF1DA5DFD60009BDA2 /* Add.swift in Sources */,
-				BF044E151DA91A430070F2BD /* Reset.swift in Sources */,
-				BF044E131DA91A430070F2BD /* Move.swift in Sources */,
+				BF044E321DA9BB9E0070F2BD /* main.swift in Sources */,
+				BF044E291DA9BB700070F2BD /* Add.swift in Sources */,
+				BF044E2A1DA9BB700070F2BD /* Delete.swift in Sources */,
+				BF044E2B1DA9BB700070F2BD /* Done.swift in Sources */,
+				BF044E2C1DA9BB700070F2BD /* List.swift in Sources */,
+				BF044E2D1DA9BB700070F2BD /* Move.swift in Sources */,
+				BF044E2E1DA9BB700070F2BD /* Rename.swift in Sources */,
+				BF044E2F1DA9BB700070F2BD /* Reset.swift in Sources */,
+				BF044E301DA9BB700070F2BD /* Undone.swift in Sources */,
+				BF044E311DA9BB700070F2BD /* Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
