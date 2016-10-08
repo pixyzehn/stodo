@@ -2,6 +2,7 @@
 Swifty command-line tool for todo list.
 
 ```
+$ stodo
 Available commands:
 
    add       Create a new task

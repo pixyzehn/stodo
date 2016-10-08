@@ -12,7 +12,9 @@ import Nimble
 
 class ActionTypeTests: QuickSpec {
     override func spec() {
+        var target: Int!
         beforeEach {
+            target = 1
             TodoTests.addNewFileForTests()
             TodoTests.addFixturesForTests()
         }
@@ -33,7 +35,6 @@ class ActionTypeTests: QuickSpec {
             }
 
             it("delete a task") {
-                let target = 1
                 switch TodoTests.delete(at: target) {
                 case .success():
                     expect(TodoTests.get(id: target)).to(beNil())
@@ -43,7 +44,6 @@ class ActionTypeTests: QuickSpec {
             }
 
             it("done a task") {
-                let target = 1
                 guard let todo = TodoTests.get(id: target) else { fatalError("Could not find the task.") }
                 expect(todo.isDone).to(beFalse())
 
@@ -83,7 +83,6 @@ class ActionTypeTests: QuickSpec {
             }
 
             it("reneme task") {
-                let target = 1
                 expect(TodoTests.savedTodos[0].title).to(equal("todo_test_1"))
                 switch TodoTests.rename(at: target, name: "updated_todo_test_1") {
                 case .success(_):
@@ -104,7 +103,6 @@ class ActionTypeTests: QuickSpec {
             }
 
             it("undone a task") {
-                let target = 1
                 switch TodoTests.done(at: target) {
                 case .success(_):
                     if let todo = TodoTests.get(id: target) {
