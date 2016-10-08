@@ -19,7 +19,7 @@ Available commands:
 
 ## Installation
 
-To be added...
+Install the `stodo` command line tool by running git clone for this repo followed by `make install` in the root directory.
 
 ## Usage
 
