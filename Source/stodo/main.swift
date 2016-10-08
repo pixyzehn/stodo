@@ -10,11 +10,14 @@ import Commandant
 import StodoKit
 
 let registry = CommandRegistry<StodoError>()
-registry.register(ListCommand())
 registry.register(AddCommand())
-registry.register(DoneCommand())
-registry.register(UndoneCommand())
 registry.register(DeleteCommand())
+registry.register(DoneCommand())
+registry.register(ListCommand())
+registry.register(MoveCommand())
+registry.register(RenameCommand())
+registry.register(ResetCommand())
+registry.register(UndoneCommand())
 registry.register(VersionCommand())
 
 let helpCommand = HelpCommand(registry: registry)

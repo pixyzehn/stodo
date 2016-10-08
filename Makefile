@@ -1,18 +1,19 @@
 EXECUTABLE_NAME=stodo
 SCHEME_NAME=stodo
+FRAMEWORK_NAME = Stodo
 WORKSPACE_NAME=stodo.xcworkspace
 IDENTIFIER=com.pixyzehn.stodo
 COMPONENTS_PLIST=Source/stodo/Components.plist
 
-TEMPORARY_FOLDER?=/tmp/$(SCHEME_NAME).dst
+TEMPORARY_FOLDER?=/tmp/$(FRAMEWORK_NAME).dst
 PREFIX?=/usr/local
 BUILD_TOOL?=xcodebuild
 
 XCODEFLAGS=-workspace '$(WORKSPACE_NAME)' -scheme '$(SCHEME_NAME)' DSTROOT=$(TEMPORARY_FOLDER)
 
-OUTPUT_PACKAGE=$(SCHEME_NAME).pkg
-OUTPUT_FRAMEWORK=$(SCHEME_NAME)Kit.framework
-OUTPUT_FRAMEWORK_ZIP=$(SCHEME_NAME)Kit.framework.zip
+OUTPUT_PACKAGE=$(FRAMEWORK_NAME).pkg
+OUTPUT_FRAMEWORK=$(FRAMEWORK_NAME)Kit.framework
+OUTPUT_FRAMEWORK_ZIP=$(FRAMEWORK_NAME)Kit.framework.zip
 
 BUILT_BUNDLE=$(TEMPORARY_FOLDER)/Applications/$(EXECUTABLE_NAME).app
 CARTHAGEKIT_BUNDLE=$(BUILT_BUNDLE)/Contents/Frameworks/$(OUTPUT_FRAMEWORK)
@@ -38,7 +39,7 @@ clean:
 	$(BUILD_TOOL) $(XCODEFLAGS) clean
 
 install: package
-	sudo installer -pkg $(SCHEME_NAME).pkg -target /
+	sudo installer -pkg $(FRAMEWORK_NAME).pkg -target /
 
 uninstall:
 	rm -rf "$(FRAMEWORKS_FOLDER)/$(OUTPUT_FRAMEWORK)"

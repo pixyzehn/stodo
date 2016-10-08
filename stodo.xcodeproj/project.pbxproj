@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF044E051DA8EA770070F2BD /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E041DA8EA770070F2BD /* Move.swift */; };
+		BF044E091DA8FE2B0070F2BD /* Commandant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF044E0A1DA8FE2B0070F2BD /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF044E0D1DA9046F0070F2BD /* Rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E0C1DA9046F0070F2BD /* Rename.swift */; };
+		BF044E0F1DA90CB60070F2BD /* Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E0E1DA90CB60070F2BD /* Reset.swift */; };
 		BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AE1DA5B2950009BDA2 /* StodoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -58,6 +63,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		BF044E081DA8FE190070F2BD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF044E091DA8FE2B0070F2BD /* Commandant.framework in CopyFiles */,
+				BF044E0A1DA8FE2B0070F2BD /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF7875B21DA5B2950009BDA2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +101,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF044E041DA8EA770070F2BD /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = SOURCE_ROOT; };
+		BF044E0C1DA9046F0070F2BD /* Rename.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rename.swift; sourceTree = SOURCE_ROOT; };
+		BF044E0E1DA90CB60070F2BD /* Reset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reset.swift; sourceTree = SOURCE_ROOT; };
 		BF7875831DA5B2650009BDA2 /* stodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7875981DA5B2950009BDA2 /* StodoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StodoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7875A01DA5B2950009BDA2 /* StodoKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StodoKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +233,9 @@
 				BF7875EA1DA5DFD60009BDA2 /* Delete.swift */,
 				BF7875EB1DA5DFD60009BDA2 /* Done.swift */,
 				BF7875EC1DA5DFD60009BDA2 /* List.swift */,
+				BF044E041DA8EA770070F2BD /* Move.swift */,
+				BF044E0C1DA9046F0070F2BD /* Rename.swift */,
+				BF044E0E1DA90CB60070F2BD /* Reset.swift */,
 				BF7875ED1DA5DFD60009BDA2 /* Undone.swift */,
 				BF7875EE1DA5DFD60009BDA2 /* Version.swift */,
 			);
@@ -259,6 +281,7 @@
 			buildConfigurationList = BF7875AF1DA5B2950009BDA2 /* Build configuration list for PBXNativeTarget "StodoKit" */;
 			buildPhases = (
 				BF7875931DA5B2950009BDA2 /* Sources */,
+				BF044E081DA8FE190070F2BD /* CopyFiles */,
 				BF7875941DA5B2950009BDA2 /* Frameworks */,
 				BF7875951DA5B2950009BDA2 /* Headers */,
 				BF7875961DA5B2950009BDA2 /* Resources */,
@@ -442,9 +465,12 @@
 				BF7875F11DA5DFD60009BDA2 /* Done.swift in Sources */,
 				BF7875F41DA5DFD60009BDA2 /* Version.swift in Sources */,
 				BF7875F01DA5DFD60009BDA2 /* Delete.swift in Sources */,
+				BF044E051DA8EA770070F2BD /* Move.swift in Sources */,
 				BF7875F21DA5DFD60009BDA2 /* List.swift in Sources */,
+				BF044E0D1DA9046F0070F2BD /* Rename.swift in Sources */,
 				BF7875FC1DA5DFDF0009BDA2 /* main.swift in Sources */,
 				BF7875EF1DA5DFD60009BDA2 /* Add.swift in Sources */,
+				BF044E0F1DA90CB60070F2BD /* Reset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

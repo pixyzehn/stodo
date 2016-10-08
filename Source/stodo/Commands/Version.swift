@@ -15,7 +15,7 @@ public struct VersionCommand: CommandProtocol {
     public typealias ClientError = StodoError
 
     public let verb = "version"
-    public let function = "Display the current stodo"
+    public let function = "Display the current version"
 
     public func run(_ options: Options) -> Result<(), ClientError> {
         if let version = stodoKitBundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {

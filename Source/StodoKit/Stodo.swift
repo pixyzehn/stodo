@@ -68,6 +68,9 @@ public protocol ActionType {
     static func done(at target: Int) -> Result<(), StodoError>
     static func undone(at target: Int) -> Result<(), StodoError>
     static func delete(at target: Int) -> Result<(), StodoError>
+    static func move(from fromTarget: Int, to toTarget: Int) -> Result<(), StodoError>
+    static func rename(at target: Int, name: String) -> Result<(), StodoError>
+    static func reset() -> Result<(), StodoError>
 }
 
 extension Todo: ActionType {
@@ -143,6 +146,41 @@ extension Todo: ActionType {
             return .success()
         } else {
             return .failure(StodoError.deleteError(failureReason: "Could not find the task."))
+        }
+    }
+
+    public static func move(from fromTarget: Int, to toTarget: Int) -> Result<(), StodoError> {
+        var todos = savedTodos
+        let fromTodo = todos.filter { $0.id == fromTarget }.first
+        let toTodo = todos.filter { $0.id == toTarget }.first
+        if let fromTodo = fromTodo, let toTodo = toTodo,
+                let fromIndex = todos.index(of: fromTodo), let toIndex = todos.index(of: toTodo) {
+            swap(&todos[fromIndex], &todos[toIndex])
+            savedTodos = todos
+            return .success()
+        } else {
+            return .failure(StodoError.moveError(failureReason: "Could not find the task."))
+        }
+    }
+
+    public static func rename(at target: Int, name: String) -> Result<(), StodoError> {
+        let todos = savedTodos
+        let ids = todos.map { $0.id }
+        if ids.contains(target) {
+            todos.filter { $0.id == target }.first?.title = name
+            savedTodos = todos
+            return .success()
+        } else {
+            return .failure(StodoError.renameError(failureReason: "Could not find the task."))
+        }
+    }
+
+    public static func reset() -> Result<(), StodoError> {
+        savedTodos = []
+        if savedTodos.isEmpty {
+            return .success()
+        } else {
+            return .failure(StodoError.renameError(failureReason: "Could not find the task."))
         }
     }
 }

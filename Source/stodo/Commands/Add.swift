@@ -23,7 +23,7 @@ public struct AddOptions: OptionsProtocol {
 
     public static func evaluate(_ m: CommandMode) -> Result<AddOptions, CommandantError<ClientError>> {
         return add
-            <*> m <| Argument(usage: "Task title")
+            <*> m <| Argument(usage: "Task title to add")
             <*> m <| Switch(flag: "d", key: "done", usage: "Add new task with a status of done")
     }
 }
