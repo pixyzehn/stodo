@@ -23,6 +23,7 @@ DerivedData
 # Carthage
 Carthage/Build
 
-stodo.pkg
-stodo.framework.zip
+# Misc
+*.pkg
+*.zip
 
