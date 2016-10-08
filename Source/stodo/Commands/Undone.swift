@@ -29,7 +29,7 @@ public struct UndoneCommand: CommandProtocol {
     public typealias ClientError = StodoError
 
     public let verb = "undone"
-    public let function = "Remove done mark"
+    public let function = "Remove done mark in a task"
 
     public func run(_ options: Options) -> Result<(), ClientError> {
         switch Todo.undone(at: options.target) {

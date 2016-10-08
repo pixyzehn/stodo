@@ -14,13 +14,13 @@ public struct RenameOptions: OptionsProtocol {
     public typealias ClientError = StodoError
     let target: Int
     let name: String
-    
+
     static func rename(_ target: Int) -> (String) -> RenameOptions {
         return { name in
             return self.init(target: target, name: name)
         }
     }
-    
+
     public static func evaluate(_ m: CommandMode) -> Result<RenameOptions, CommandantError<ClientError>> {
         return rename
             <*> m <| Argument(usage: "Task id to rename")
@@ -31,10 +31,10 @@ public struct RenameOptions: OptionsProtocol {
 public struct RenameCommand: CommandProtocol {
     public typealias Options = RenameOptions
     public typealias ClientError = StodoError
-    
+
     public let verb = "rename"
     public let function = "Rename your task"
-    
+
     public func run(_ options: RenameOptions) -> Result<(), ClientError> {
         switch Todo.rename(at: options.target, name: options.name) {
         case .success(_):

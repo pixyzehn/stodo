@@ -4,15 +4,15 @@ Swifty command-line tool for todo list.
 ```
 Available commands:
 
-   add       Add a new task if it exists
+   add       Create a new task
    delete    Delete a task if it exists
-   done      Check done mark
+   done      Check done mark in a task
    help      Display general or command-specific help
    list      Show a list of your tasks
    move      Move your tasks
    rename    Rename your task
    reset     Reset all your task
-   undone    Remove done mark
+   undone    Remove done mark in a task
    version   Display the current version
 ```
 
@@ -44,7 +44,7 @@ $ stodo add 'Check new application'
 ```
 
 #### Add options
-- `-d` or `--done` : Add new task with a status of done.
+- `-d` or `--done` : Add a new task with a status of done.
 
 ### Delete
 ```
@@ -73,15 +73,15 @@ None.
 $ stodo help
 Available commands:
 
-   add       Add a new task if it exists
+   add       Create a new task
    delete    Delete a task if it exists
-   done      Check done mark
+   done      Check done mark in a task
    help      Display general or command-specific help
    list      Show a list of your tasks
    move      Move your tasks
    rename    Rename your task
    reset     Reset all your task
-   undone    Remove done mark
+   undone    Remove done mark in a task
    version   Display the current version
 ```
 
@@ -101,14 +101,14 @@ $ stodo list -m -t -d
 ```
 #### List options
 - `-m` or `--markdown` : Show todo list by markdown.
-- `-t` or `--time` : Show todo list with `createdAt` or `updatedAt`.
+- `-t` or `--time` : Show todo list with `createdAt` or `updatedAt` if it has.
 - `-d` or `--done` : Show only done tasks.
 - `-u` or `--undone` : Show only undone tasks.
 
 ### Move
 ```
 $ stodo move 1 3
-[x] 003: Grab coffee with Satoshi
+[x] 003: Grab coffee at cafe
 [x] 001: Buy milk after work
 [ ] 004: Check new application
 ```
@@ -119,7 +119,7 @@ None.
 ### Rename
 ```
 $ stodo rename 3 'Grab coffee at home'
-[ ] 003: Grab coffee at cafe
+[ ] 003: Grab coffee at home
 [x] 001: Buy milk after work
 [ ] 004: Check new application
 ```
@@ -139,9 +139,8 @@ None.
 ### Undone
 ```
 $ stodo undone 1
+[ ] 003: Grab coffee at home
 [ ] 001: Buy milk after work
-[ ] 002: Call Taro
-[x] 003: Grab coffee with Satoshi
 [ ] 004: Check new application
 ```
 

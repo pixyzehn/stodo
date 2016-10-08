@@ -13,10 +13,10 @@ import StodoKit
 public struct ResetCommand: CommandProtocol {
     public typealias Options = NoOptions<StodoError>
     public typealias ClientError = StodoError
-    
+
     public let verb = "reset"
     public let function = "Reset all your task"
-    
+
     public func run(_ options: Options) -> Result<(), ClientError> {
         switch Todo.reset() {
         case .success(_):

@@ -29,7 +29,7 @@ public struct DoneCommand: CommandProtocol {
     public typealias ClientError = StodoError
 
     public let verb = "done"
-    public let function = "Check done mark"
+    public let function = "Check done mark in a task"
 
     public func run(_ options: Options) -> Result<(), ClientError> {
         switch Todo.done(at: options.target) {
