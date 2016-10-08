@@ -64,7 +64,7 @@ extension Todo: FileType {
 public protocol ActionType {
     associatedtype Response
     static func list() -> Result<Response, StodoError>
-    static func add(title: String) -> Result<(), StodoError>
+    static func add(title: String, isDone: Bool) -> Result<(), StodoError>
     static func done(at target: Int) -> Result<(), StodoError>
     static func undone(at target: Int) -> Result<(), StodoError>
     static func delete(at target: Int) -> Result<(), StodoError>
@@ -80,13 +80,14 @@ extension Todo: ActionType {
         return .success(savedTodos)
     }
 
-    public static func add(title: String) -> Result<(), StodoError> {
+    public static func add(title: String, isDone: Bool = false) -> Result<(), StodoError> {
         if title.isEmpty {
             return .failure(StodoError.addError(failureReason: "Could not fine the title."))
         }
 
         if !fileManager.fileExists(atPath: fullPath) {
             let todo = Todo(id: 1, title: title)
+            todo.isDone = isDone
             let todos: [Todo] = [todo]
             let data = KeyedArchiver.archive(todos: todos)
             fileManager.createFile(atPath: fullPath, contents: data, attributes: nil)
@@ -95,6 +96,7 @@ extension Todo: ActionType {
             var todos = savedTodos
             let maxId = todos.map {$0.id}.max() ?? 0
             let todo = Todo(id: maxId + 1, title: title)
+            todo.isDone = isDone
             todos.append(todo)
             savedTodos = todos
             return .success()

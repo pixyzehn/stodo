@@ -28,7 +28,7 @@ public struct ListOptions: OptionsProtocol {
             <*> m <| Switch(flag: "m", key: "markdown", usage: "Show list by markdown")
             <*> m <| Switch(flag: "t", key: "time", usage: "Show todo list with createdAt or updatedAt")
             <*> m <| Switch(flag: "d", key: "done", usage: "Show only done tasks")
-            <*> m <| Switch(flag: "u", key: "undone", usage: "Show only undone tasks.")
+            <*> m <| Switch(flag: "u", key: "undone", usage: "Show only undone tasks")
     }
 }
 

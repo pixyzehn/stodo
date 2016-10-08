@@ -13,14 +13,18 @@ import StodoKit
 public struct AddOptions: OptionsProtocol {
     public typealias ClientError = StodoError
     let title: String
+    let isDone: Bool
 
-    static func add(_ title: String) -> AddOptions {
-        return self.init(title: title)
+    static func add(_ title: String) -> (Bool) -> AddOptions {
+        return { isDone in
+            self.init(title: title, isDone: isDone)
+        }
     }
 
     public static func evaluate(_ m: CommandMode) -> Result<AddOptions, CommandantError<ClientError>> {
         return add
             <*> m <| Argument(usage: "Task title")
+            <*> m <| Switch(flag: "d", key: "done", usage: "Add new task with a status of done")
     }
 }
 
@@ -33,7 +37,7 @@ public struct AddCommand: CommandProtocol {
 
     public func run(_ options: Options) -> Result<(), ClientError> {
         let title = options.title
-        switch Todo.add(title: title) {
+        switch Todo.add(title: title, isDone: options.isDone) {
         case .success(_):
             _ = ListCommand().run(ListOptions())
             return .success()
