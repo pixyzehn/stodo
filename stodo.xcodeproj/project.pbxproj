@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF044E091DA8FE2B0070F2BD /* Commandant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF044E0A1DA8FE2B0070F2BD /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF044E131DA91A430070F2BD /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E101DA91A430070F2BD /* Move.swift */; };
 		BF044E141DA91A430070F2BD /* Rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E111DA91A430070F2BD /* Rename.swift */; };
 		BF044E151DA91A430070F2BD /* Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E121DA91A430070F2BD /* Reset.swift */; };
 		BF044E1E1DA937150070F2BD /* KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E1C1DA937150070F2BD /* KeyedArchiverTests.swift */; };
 		BF044E1F1DA937150070F2BD /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E1D1DA937150070F2BD /* TodoTests.swift */; };
+		BF044E241DA9B3100070F2BD /* StodoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7876011DA5DFF30009BDA2 /* StodoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AE1DA5B2950009BDA2 /* StodoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -65,17 +64,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BF044E081DA8FE190070F2BD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				BF044E091DA8FE2B0070F2BD /* Commandant.framework in CopyFiles */,
-				BF044E0A1DA8FE2B0070F2BD /* Result.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF7875B21DA5B2950009BDA2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +243,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF044E241DA9B3100070F2BD /* StodoKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +276,6 @@
 			buildConfigurationList = BF7875AF1DA5B2950009BDA2 /* Build configuration list for PBXNativeTarget "StodoKit" */;
 			buildPhases = (
 				BF7875931DA5B2950009BDA2 /* Sources */,
-				BF044E081DA8FE190070F2BD /* CopyFiles */,
 				BF7875941DA5B2950009BDA2 /* Frameworks */,
 				BF7875951DA5B2950009BDA2 /* Headers */,
 				BF7875961DA5B2950009BDA2 /* Resources */,
@@ -627,7 +615,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Source/stodo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @rpath/../Frameworks /Library/Frameworks /Library/Frameworks/StodoKit.framework/Versions/Current/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @rpath/../Frameworks /Library/Frameworks/ /Library/Frameworks/StodoKit.framework/Versions/Current/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.stodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -648,7 +636,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Source/stodo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @rpath/../Frameworks /Library/Frameworks /Library/Frameworks/StodoKit.framework/Versions/Current/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @rpath/../Frameworks /Library/Frameworks/ /Library/Frameworks/StodoKit.framework/Versions/Current/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.stodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
