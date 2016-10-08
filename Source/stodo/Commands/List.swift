@@ -23,7 +23,7 @@ public struct ListCommand: CommandProtocol {
         case .success(let todos):
             for todo in todos {
                 let mark = todo.isDone ? "x" : " "
-                print("[\(mark)] \(todo.id): \(todo.title)")
+                print("[\(mark)] \(NSString(format: "%03d", todo.id)): \(todo.title)")
             }
             return .success()
         case .failure(let error):
