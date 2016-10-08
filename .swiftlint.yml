@@ -12,6 +12,6 @@ variable_name:
     - id
 
 function_body_length:
-  warning: 60
+  warning: 100
 cyclomatic_complexity:
   warning: 20

@@ -12,30 +12,31 @@ import Nimble
 
 class StodoKitTests: QuickSpec {
     override func spec() {
-        beforeSuite {
+        beforeEach {
             TodoTests.addNewFileForTests()
             TodoTests.addFixturesForTests()
         }
 
-        afterSuite {
+        afterEach {
             TodoTests.deleteFileForTests()
         }
 
         describe("the ActionType") {
-            it("show a list of tasks") {
-                switch TodoTests.list() {
-                case .success(let results):
-                    expect(results.count).to(equal(TodoTests.savedTodos.count))
-                case .failure(let error):
-                    print("\(error)")
-                }
-            }
-
             it("add a new task") {
                 let sum = TodoTests.savedTodos.count
                 switch TodoTests.add(title: "test4") {
                 case .success():
                     expect(TodoTests.savedTodos.count).to(equal(sum + 1))
+                case .failure(let error):
+                    print("\(error)")
+                }
+            }
+
+            it("delete a task") {
+                let target = 1
+                switch TodoTests.delete(at: target) {
+                case .success():
+                    expect(TodoTests.get(id: target)).to(beNil())
                 case .failure(let error):
                     print("\(error)")
                 }
@@ -58,6 +59,50 @@ class StodoKitTests: QuickSpec {
                 }
             }
 
+            it("show a list of tasks") {
+                switch TodoTests.list() {
+                case .success(let results):
+                    expect(results.count).to(equal(TodoTests.savedTodos.count))
+                case .failure(let error):
+                    print("\(error)")
+                }
+            }
+
+            it("move tasks") {
+                let fromTarget = 1
+                let toTarget = 2
+                expect(TodoTests.savedTodos[0].id).to(equal(fromTarget))
+                expect(TodoTests.savedTodos[1].id).to(equal(toTarget))
+                switch TodoTests.move(from: fromTarget, to: toTarget) {
+                case .success(_):
+                    expect(TodoTests.savedTodos[0].id).to(equal(toTarget))
+                    expect(TodoTests.savedTodos[1].id).to(equal(fromTarget))
+                case .failure(let error):
+                    print("\(error)")
+                }
+            }
+
+            it("reneme task") {
+                let target = 1
+                expect(TodoTests.savedTodos[0].title).to(equal("todo_test_1"))
+                switch TodoTests.rename(at: target, name: "updated_todo_test_1") {
+                case .success(_):
+                    expect(TodoTests.savedTodos[0].title).to(equal("updated_todo_test_1"))
+                case .failure(let error):
+                    print("\(error)")
+                }
+            }
+
+            it("reset all tasks") {
+                expect(TodoTests.savedTodos.count).to(equal(3))
+                switch TodoTests.reset() {
+                case .success(_):
+                    expect(TodoTests.savedTodos.count).to(equal(0))
+                case .failure(let error):
+                    print("\(error)")
+                }
+            }
+
             it("undone a task") {
                 let target = 1
                 _ = TodoTests.done(at: target)
@@ -74,19 +119,6 @@ class StodoKitTests: QuickSpec {
                     } else {
                         fatalError("Could not find the task.")
                     }
-                case .failure(let error):
-                    print("\(error)")
-                }
-            }
-
-            it("delete a task") {
-                let target = 1
-                guard let todo = TodoTests.get(id: target) else { fatalError("Could not find the task.") }
-                expect(todo).toNot(beNil())
-
-                switch TodoTests.delete(at: target) {
-                case .success():
-                    expect(TodoTests.get(id: target)).to(beNil())
                 case .failure(let error):
                     print("\(error)")
                 }
