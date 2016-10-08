@@ -14,17 +14,13 @@ public struct KeyedArchiver {
     }
 
     static func archive(todos: [Todo], path: String) {
-        let success = NSKeyedArchiver.archiveRootObject(todos, toFile: path)
-        if !success {
-            fatalError("Could not archive.")
-        }
+        NSKeyedArchiver.archiveRootObject(todos, toFile: path)
     }
 
     static func unarchive(path: String) -> [Todo] {
         if let todos = NSKeyedUnarchiver.unarchiveObject(withFile: path) as? [Todo] {
             return todos
-        } else {
-            fatalError("Could not unarchive.")
         }
+        return []
     }
 }
