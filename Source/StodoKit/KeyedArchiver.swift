@@ -9,6 +9,10 @@
 import Foundation
 
 public struct KeyedArchiver {
+    static func archive(todos: [Todo]) -> Data {
+        return NSKeyedArchiver.archivedData(withRootObject: todos)
+    }
+
     static func archive(todos: [Todo], path: String) {
         NSKeyedArchiver.archiveRootObject(todos, toFile: path)
     }

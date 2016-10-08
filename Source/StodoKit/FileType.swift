@@ -9,8 +9,9 @@
 import Foundation
 
 public protocol FileType {
-    static var fileName: String { get }
     static var rootURL: URL { get }
+    static var fileManager: FileManager { get }
+    static var fileName: String { get }
     static var fullPath: String { get }
 }
 
@@ -21,11 +22,6 @@ public extension FileType {
 
     static var fileName: String {
         return ".stodo"
-    }
-
-    static var rootURL: URL {
-        let homeDirectoryURL = URL(fileURLWithPath: NSHomeDirectory())
-        return homeDirectoryURL.appendingPathComponent(fileName, isDirectory: true)
     }
 
     static var fullPath: String {

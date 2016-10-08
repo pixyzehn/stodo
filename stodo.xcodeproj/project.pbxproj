@@ -319,7 +319,7 @@
 					BF78759F1DA5B2950009BDA2 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MGYF33XF8F;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -684,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MGYF33XF8F;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -703,6 +704,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MGYF33XF8F;
 				FRAMEWORK_SEARCH_PATHS = (

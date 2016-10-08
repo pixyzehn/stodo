@@ -12,26 +12,30 @@ import Nimble
 
 class StodoKitTests: QuickSpec {
     override func spec() {
-        beforeEach {
-            Todo.addNewFileForTests()
-            Todo.addFixturesForTests()
+        beforeSuite {
+            TodoTests.addNewFileForTests()
+            TodoTests.addFixturesForTests()
+        }
+
+        afterSuite {
+            TodoTests.deleteFileForTests()
         }
 
         describe("the ActionType") {
             it("show a list of tasks") {
-                switch Todo.list() {
+                switch TodoTests.list() {
                 case .success(let results):
-                    expect(results.count).to(equal(Todo.savedTodos.count))
+                    expect(results.count).to(equal(TodoTests.savedTodos.count))
                 case .failure(let error):
                     print("\(error)")
                 }
             }
 
             it("add a new task") {
-                let sum = Todo.savedTodos.count
-                switch Todo.add(title: "test4") {
+                let sum = TodoTests.savedTodos.count
+                switch TodoTests.add(title: "test4") {
                 case .success():
-                    expect(Todo.savedTodos.count).to(equal(sum + 1))
+                    expect(TodoTests.savedTodos.count).to(equal(sum + 1))
                 case .failure(let error):
                     print("\(error)")
                 }
@@ -39,12 +43,12 @@ class StodoKitTests: QuickSpec {
 
             it("done a task") {
                 let target = 1
-                guard let todo = Todo.get(id: target) else { fatalError("Could not find the task.") }
+                guard let todo = TodoTests.get(id: target) else { fatalError("Could not find the task.") }
                 expect(todo.isDone).to(beFalse())
 
-                switch Todo.done(at: todo.id) {
+                switch TodoTests.done(at: todo.id) {
                 case .success():
-                    if let todo = Todo.get(id: target) {
+                    if let todo = TodoTests.get(id: target) {
                         expect(todo.isDone).to(beTrue())
                     } else {
                         fatalError("Could not find the task.")
@@ -56,16 +60,16 @@ class StodoKitTests: QuickSpec {
 
             it("undone a task") {
                 let target = 1
-                _ = Todo.done(at: target)
-                if let todo = Todo.get(id: target) {
+                _ = TodoTests.done(at: target)
+                if let todo = TodoTests.get(id: target) {
                     expect(todo.isDone).to(beTrue())
                 } else {
                     fatalError("Could not find the task.")
                 }
 
-                switch Todo.undone(at: target) {
+                switch TodoTests.undone(at: target) {
                 case .success():
-                    if let todo = Todo.get(id: target) {
+                    if let todo = TodoTests.get(id: target) {
                         expect(todo.isDone).to(beFalse())
                     } else {
                         fatalError("Could not find the task.")
@@ -77,12 +81,12 @@ class StodoKitTests: QuickSpec {
 
             it("delete a task") {
                 let target = 1
-                guard let todo = Todo.get(id: target) else { fatalError("Could not find the task.") }
+                guard let todo = TodoTests.get(id: target) else { fatalError("Could not find the task.") }
                 expect(todo).toNot(beNil())
 
-                switch Todo.delete(at: target) {
+                switch TodoTests.delete(at: target) {
                 case .success():
-                    expect(Todo.get(id: target)).to(beNil())
+                    expect(TodoTests.get(id: target)).to(beNil())
                 case .failure(let error):
                     print("\(error)")
                 }
@@ -93,13 +97,15 @@ class StodoKitTests: QuickSpec {
 
 // MARK: Helper
 
-extension FileType {
-    fileprivate static var rootURL: URL {
+public class TodoTests: Todo {}
+
+extension TodoTests {
+    public override class var rootURL: URL {
         return URL(fileURLWithPath: NSTemporaryDirectory().appending(fileName), isDirectory: true)
     }
 }
 
-extension Todo {
+extension TodoTests {
     fileprivate static func get(id: Int) -> Todo? {
         return savedTodos.filter { $0.id == id }.first
     }
@@ -110,10 +116,20 @@ extension Todo {
         }
     }
 
+    fileprivate static func deleteFileForTests() {
+        if fileManager.fileExists(atPath: fullPath) {
+            do {
+                try fileManager.removeItem(atPath: fullPath)
+            } catch(let error) {
+                print("\(error)")
+            }
+        }
+    }
+
     fileprivate static func addFixturesForTests() {
-        let todo1 = Todo(id: 1, title: "todo1")
-        let todo2 = Todo(id: 2, title: "todo2")
-        let todo3 = Todo(id: 3, title: "todo3")
+        let todo1 = Todo(id: 1, title: "todo_test_1")
+        let todo2 = Todo(id: 2, title: "todo_test_2")
+        let todo3 = Todo(id: 3, title: "todo_test_3")
         savedTodos = [todo1, todo2, todo3]
     }
 }

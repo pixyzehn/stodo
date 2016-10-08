@@ -11,7 +11,7 @@ import Result
 
 public let stodoKitBundle = Bundle(for: Todo.self)
 
-public class Todo: NSObject, NSCoding, FileType {
+public class Todo: NSObject, NSCoding {
     public var id: Int = 0
     public var title: String = ""
     public var isDone: Bool = false
@@ -25,15 +25,15 @@ public class Todo: NSObject, NSCoding, FileType {
 
     public required init?(coder aDecoder: NSCoder) {
         super.init()
-        self.id = aDecoder.decodeInteger(forKey: "ID")
-        self.title = aDecoder.decodeObject(forKey: "TITLE") as! String
-        self.isDone = aDecoder.decodeBool(forKey: "ISDONE")
+        self.id = aDecoder.decodeInteger(forKey: "id")
+        self.title = aDecoder.decodeObject(forKey: "title") as! String
+        self.isDone = aDecoder.decodeBool(forKey: "isdone")
     }
 
     public func encode(with aCoder: NSCoder) {
-        aCoder.encode(id, forKey: "ID")
-        aCoder.encode(title, forKey: "TITLE")
-        aCoder.encode(isDone, forKey: "ISDONE")
+        aCoder.encode(id, forKey: "id")
+        aCoder.encode(title, forKey: "title")
+        aCoder.encode(isDone, forKey: "isdone")
     }
 
     static var savedTodos: [Todo] {
@@ -44,6 +44,13 @@ public class Todo: NSObject, NSCoding, FileType {
         set {
             KeyedArchiver.archive(todos: newValue, path: fullPath)
         }
+    }
+}
+
+extension Todo: FileType {
+    open class var rootURL: URL {
+        let homeDirectoryURL = URL(fileURLWithPath: NSHomeDirectory())
+        return homeDirectoryURL.appendingPathComponent(fileName, isDirectory: true)
     }
 }
 
@@ -69,15 +76,19 @@ extension Todo: ActionType {
         }
 
         if !fileManager.fileExists(atPath: fullPath) {
-            fileManager.createFile(atPath: fullPath, contents: nil, attributes: nil)
+            let todo = Todo(id: 1, title: title)
+            let todos: [Todo] = [todo]
+            let data = KeyedArchiver.archive(todos: todos)
+            fileManager.createFile(atPath: fullPath, contents: data, attributes: nil)
+            return .success()
+        } else {
+            var todos = savedTodos
+            let maxId = todos.map {$0.id}.max() ?? 0
+            let todo = Todo(id: maxId + 1, title: title)
+            todos.append(todo)
+            savedTodos = todos
+            return .success()
         }
-
-        var todos = savedTodos
-        let maxId = todos.map {$0.id}.max() ?? 0
-        let todo = Todo(id: maxId + 1, title: title)
-        todos.append(todo)
-        savedTodos = todos
-        return .success()
     }
 
     public static func done(at target: Int) -> Result<(), StodoError> {
