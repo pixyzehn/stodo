@@ -20,6 +20,10 @@ Available commands:
 ## Installation
 
 Install the `stodo` command line tool by running git clone for this repo followed by `make install` in the root directory.
+```
+$ git clone git@github.com:pixyzehn/stodo.git
+$ make install
+```
 
 ## Usage
 
