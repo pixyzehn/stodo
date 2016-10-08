@@ -43,13 +43,13 @@ $ stodo add 'Check new application'
 ```
 
 #### Add options
-- `-x`: Add new task with a status of done.
+- `-d` or `--done` : Add new task with a status of done.
 
 ### Done
 ```
-$ stodo done 2 3
+$ stodo done 3
 [x] 001: Buy milk after work
-[x] 002: Call Taro
+[ ] 002: Call Taro
 [x] 003: Grab coffee with Satoshi
 [ ] 004: Check new application
 ```
@@ -59,7 +59,7 @@ None.
 
 ### Undone
 ```
-$ stodo undone 1 2
+$ stodo undone 1
 [ ] 001: Buy milk after work
 [ ] 002: Call Taro
 [x] 003: Grab coffee with Satoshi
