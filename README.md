@@ -1,5 +1,9 @@
 # stodo
-Swifty command-line tool for todo list.
+![Swift3.0](https://img.shields.io/badge/Swift-3.0-blue.svg?style=flat)
+[![Build Status](https://travis-ci.org/pixyzehn/stodo.svg?branch=master)](https://travis-ci.org/pixyzehn/stodo) [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
+)](http://mit-license.org)
+[![codecov.io](https://codecov.io/gh/pixyzehn/stodo/branch/master/graphs/badge.svg)](https://codecov.io/gh/pixyzehn/stodo/branch/master)  
+Swifty command-line tool for todo list.  
 
 ```
 $ stodo
