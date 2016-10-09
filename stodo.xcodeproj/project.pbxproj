@@ -20,8 +20,6 @@
 		BF044E301DA9BB700070F2BD /* Undone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875ED1DA5DFD60009BDA2 /* Undone.swift */; };
 		BF044E311DA9BB700070F2BD /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EE1DA5DFD60009BDA2 /* Version.swift */; };
 		BF044E321DA9BB9E0070F2BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875F81DA5DFDF0009BDA2 /* main.swift */; };
-		BF044E331DA9BEA90070F2BD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; };
-		BF044E341DA9BEA90070F2BD /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; };
 		BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AE1DA5B2950009BDA2 /* StodoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -129,8 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF044E331DA9BEA90070F2BD /* Result.framework in Frameworks */,
-				BF044E341DA9BEA90070F2BD /* Commandant.framework in Frameworks */,
 				BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
