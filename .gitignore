@@ -26,4 +26,4 @@ Carthage/Build
 # Misc
 *.pkg
 *.zip
-
+*.coverage.txt
