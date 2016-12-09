@@ -3,7 +3,7 @@ SCHEME_NAME=stodo
 FRAMEWORK_NAME = Stodo
 WORKSPACE_NAME=stodo.xcworkspace
 IDENTIFIER=com.pixyzehn.stodo
-COMPONENTS_PLIST=Source/stodo/Components.plist
+COMPONENTS_PLIST=Sources/stodo/Components.plist
 
 TEMPORARY_FOLDER?=/tmp/$(FRAMEWORK_NAME).dst
 PREFIX?=/usr/local

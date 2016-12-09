@@ -7,30 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF044E1E1DA937150070F2BD /* KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E1C1DA937150070F2BD /* KeyedArchiverTests.swift */; };
-		BF044E1F1DA937150070F2BD /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E1D1DA937150070F2BD /* TodoTests.swift */; };
-		BF044E241DA9B3100070F2BD /* StodoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7876011DA5DFF30009BDA2 /* StodoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF044E291DA9BB700070F2BD /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875E91DA5DFD60009BDA2 /* Add.swift */; };
-		BF044E2A1DA9BB700070F2BD /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EA1DA5DFD60009BDA2 /* Delete.swift */; };
-		BF044E2B1DA9BB700070F2BD /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EB1DA5DFD60009BDA2 /* Done.swift */; };
-		BF044E2C1DA9BB700070F2BD /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EC1DA5DFD60009BDA2 /* List.swift */; };
-		BF044E2D1DA9BB700070F2BD /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E101DA91A430070F2BD /* Move.swift */; };
-		BF044E2E1DA9BB700070F2BD /* Rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E111DA91A430070F2BD /* Rename.swift */; };
-		BF044E2F1DA9BB700070F2BD /* Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF044E121DA91A430070F2BD /* Reset.swift */; };
-		BF044E301DA9BB700070F2BD /* Undone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875ED1DA5DFD60009BDA2 /* Undone.swift */; };
-		BF044E311DA9BB700070F2BD /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875EE1DA5DFD60009BDA2 /* Version.swift */; };
-		BF044E321DA9BB9E0070F2BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875F81DA5DFDF0009BDA2 /* main.swift */; };
+		6EDE5C761DFB7A5800550126 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C6A1DFB7A5800550126 /* Add.swift */; };
+		6EDE5C771DFB7A5800550126 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C6B1DFB7A5800550126 /* Delete.swift */; };
+		6EDE5C781DFB7A5800550126 /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C6C1DFB7A5800550126 /* Done.swift */; };
+		6EDE5C791DFB7A5800550126 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C6D1DFB7A5800550126 /* List.swift */; };
+		6EDE5C7A1DFB7A5800550126 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C6E1DFB7A5800550126 /* Move.swift */; };
+		6EDE5C7B1DFB7A5800550126 /* Rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C6F1DFB7A5800550126 /* Rename.swift */; };
+		6EDE5C7C1DFB7A5800550126 /* Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C701DFB7A5800550126 /* Reset.swift */; };
+		6EDE5C7D1DFB7A5800550126 /* Undone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C711DFB7A5800550126 /* Undone.swift */; };
+		6EDE5C7E1DFB7A5800550126 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C721DFB7A5800550126 /* Version.swift */; };
+		6EDE5C7F1DFB7A5800550126 /* Components.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE5C731DFB7A5800550126 /* Components.plist */; };
+		6EDE5C801DFB7A5800550126 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE5C741DFB7A5800550126 /* Info.plist */; };
+		6EDE5C811DFB7A5800550126 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C751DFB7A5800550126 /* main.swift */; };
+		6EDE5C881DFB7A6900550126 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C821DFB7A6900550126 /* Errors.swift */; };
+		6EDE5C891DFB7A6900550126 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C831DFB7A6900550126 /* FileType.swift */; };
+		6EDE5C8A1DFB7A6900550126 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE5C841DFB7A6900550126 /* Info.plist */; };
+		6EDE5C8B1DFB7A6900550126 /* KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C851DFB7A6900550126 /* KeyedArchiver.swift */; };
+		6EDE5C8C1DFB7A6900550126 /* Stodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C861DFB7A6900550126 /* Stodo.swift */; };
+		6EDE5C8D1DFB7A6900550126 /* StodoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EDE5C871DFB7A6900550126 /* StodoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EDE5C921DFB7A7800550126 /* ActionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C8E1DFB7A7800550126 /* ActionTypeTests.swift */; };
+		6EDE5C931DFB7A7800550126 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE5C8F1DFB7A7800550126 /* Info.plist */; };
+		6EDE5C941DFB7A7800550126 /* KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C901DFB7A7800550126 /* KeyedArchiverTests.swift */; };
+		6EDE5C951DFB7A7800550126 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C911DFB7A7800550126 /* TodoTests.swift */; };
 		BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AE1DA5B2950009BDA2 /* StodoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF7875B91DA5B3700009BDA2 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; };
 		BF7875BA1DA5B3700009BDA2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; };
-		BF7875F91DA5DFDF0009BDA2 /* Components.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF7875F51DA5DFDF0009BDA2 /* Components.plist */; };
-		BF7876021DA5DFF30009BDA2 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875FD1DA5DFF30009BDA2 /* FileType.swift */; };
-		BF7876041DA5DFF30009BDA2 /* KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7875FF1DA5DFF30009BDA2 /* KeyedArchiver.swift */; };
-		BF7876051DA5DFF30009BDA2 /* Stodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7876001DA5DFF30009BDA2 /* Stodo.swift */; };
-		BF78760A1DA5DFFF0009BDA2 /* ActionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7876081DA5DFFF0009BDA2 /* ActionTypeTests.swift */; };
-		BF78760D1DA5E09C0009BDA2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78760C1DA5E09C0009BDA2 /* Errors.swift */; };
 		BFC594B31DA7146A00F6D7DF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; };
 		BFC594B41DA7146A00F6D7DF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B21DA7146A00F6D7DF /* Quick.framework */; };
 		BFC594BB1DA71D1D00F6D7DF /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -91,33 +94,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BF044E101DA91A430070F2BD /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Move.swift; path = Source/stodo/Commands/Move.swift; sourceTree = SOURCE_ROOT; };
-		BF044E111DA91A430070F2BD /* Rename.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rename.swift; path = Source/stodo/Commands/Rename.swift; sourceTree = SOURCE_ROOT; };
-		BF044E121DA91A430070F2BD /* Reset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reset.swift; path = Source/stodo/Commands/Reset.swift; sourceTree = SOURCE_ROOT; };
-		BF044E1C1DA937150070F2BD /* KeyedArchiverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyedArchiverTests.swift; path = Source/StodoKitTests/KeyedArchiverTests.swift; sourceTree = SOURCE_ROOT; };
-		BF044E1D1DA937150070F2BD /* TodoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoTests.swift; path = Source/StodoKitTests/TodoTests.swift; sourceTree = SOURCE_ROOT; };
+		6EDE5C6A1DFB7A5800550126 /* Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		6EDE5C6B1DFB7A5800550126 /* Delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
+		6EDE5C6C1DFB7A5800550126 /* Done.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Done.swift; sourceTree = "<group>"; };
+		6EDE5C6D1DFB7A5800550126 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		6EDE5C6E1DFB7A5800550126 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		6EDE5C6F1DFB7A5800550126 /* Rename.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rename.swift; sourceTree = "<group>"; };
+		6EDE5C701DFB7A5800550126 /* Reset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reset.swift; sourceTree = "<group>"; };
+		6EDE5C711DFB7A5800550126 /* Undone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Undone.swift; sourceTree = "<group>"; };
+		6EDE5C721DFB7A5800550126 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		6EDE5C731DFB7A5800550126 /* Components.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Components.plist; path = Sources/stodo/Components.plist; sourceTree = SOURCE_ROOT; };
+		6EDE5C741DFB7A5800550126 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/stodo/Info.plist; sourceTree = SOURCE_ROOT; };
+		6EDE5C751DFB7A5800550126 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/stodo/main.swift; sourceTree = SOURCE_ROOT; };
+		6EDE5C821DFB7A6900550126 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/StodoKit/Errors.swift; sourceTree = SOURCE_ROOT; };
+		6EDE5C831DFB7A6900550126 /* FileType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileType.swift; path = Sources/StodoKit/FileType.swift; sourceTree = SOURCE_ROOT; };
+		6EDE5C841DFB7A6900550126 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/StodoKit/Info.plist; sourceTree = SOURCE_ROOT; };
+		6EDE5C851DFB7A6900550126 /* KeyedArchiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyedArchiver.swift; path = Sources/StodoKit/KeyedArchiver.swift; sourceTree = SOURCE_ROOT; };
+		6EDE5C861DFB7A6900550126 /* Stodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stodo.swift; path = Sources/StodoKit/Stodo.swift; sourceTree = SOURCE_ROOT; };
+		6EDE5C871DFB7A6900550126 /* StodoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StodoKit.h; path = Sources/StodoKit/StodoKit.h; sourceTree = SOURCE_ROOT; };
+		6EDE5C8E1DFB7A7800550126 /* ActionTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionTypeTests.swift; path = Sources/StodoKitTests/ActionTypeTests.swift; sourceTree = SOURCE_ROOT; };
+		6EDE5C8F1DFB7A7800550126 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/StodoKitTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		6EDE5C901DFB7A7800550126 /* KeyedArchiverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyedArchiverTests.swift; path = Sources/StodoKitTests/KeyedArchiverTests.swift; sourceTree = SOURCE_ROOT; };
+		6EDE5C911DFB7A7800550126 /* TodoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoTests.swift; path = Sources/StodoKitTests/TodoTests.swift; sourceTree = SOURCE_ROOT; };
 		BF7875831DA5B2650009BDA2 /* stodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7875981DA5B2950009BDA2 /* StodoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StodoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7875A01DA5B2950009BDA2 /* StodoKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StodoKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7875B71DA5B3700009BDA2 /* Commandant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Commandant.framework; path = Carthage/Build/Mac/Commandant.framework; sourceTree = "<group>"; };
 		BF7875B81DA5B3700009BDA2 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
-		BF7875E91DA5DFD60009BDA2 /* Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Add.swift; path = Source/stodo/Commands/Add.swift; sourceTree = SOURCE_ROOT; };
-		BF7875EA1DA5DFD60009BDA2 /* Delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Delete.swift; path = Source/stodo/Commands/Delete.swift; sourceTree = SOURCE_ROOT; };
-		BF7875EB1DA5DFD60009BDA2 /* Done.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Done.swift; path = Source/stodo/Commands/Done.swift; sourceTree = SOURCE_ROOT; };
-		BF7875EC1DA5DFD60009BDA2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = Source/stodo/Commands/List.swift; sourceTree = SOURCE_ROOT; };
-		BF7875ED1DA5DFD60009BDA2 /* Undone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Undone.swift; path = Source/stodo/Commands/Undone.swift; sourceTree = SOURCE_ROOT; };
-		BF7875EE1DA5DFD60009BDA2 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Source/stodo/Commands/Version.swift; sourceTree = SOURCE_ROOT; };
-		BF7875F51DA5DFDF0009BDA2 /* Components.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Components.plist; path = Source/stodo/Components.plist; sourceTree = SOURCE_ROOT; };
-		BF7875F71DA5DFDF0009BDA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/stodo/Info.plist; sourceTree = SOURCE_ROOT; };
-		BF7875F81DA5DFDF0009BDA2 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Source/stodo/main.swift; sourceTree = SOURCE_ROOT; };
-		BF7875FD1DA5DFF30009BDA2 /* FileType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileType.swift; path = Source/StodoKit/FileType.swift; sourceTree = SOURCE_ROOT; };
-		BF7875FE1DA5DFF30009BDA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/StodoKit/Info.plist; sourceTree = SOURCE_ROOT; };
-		BF7875FF1DA5DFF30009BDA2 /* KeyedArchiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyedArchiver.swift; path = Source/StodoKit/KeyedArchiver.swift; sourceTree = SOURCE_ROOT; };
-		BF7876001DA5DFF30009BDA2 /* Stodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stodo.swift; path = Source/StodoKit/Stodo.swift; sourceTree = SOURCE_ROOT; };
-		BF7876011DA5DFF30009BDA2 /* StodoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StodoKit.h; path = Source/StodoKit/StodoKit.h; sourceTree = SOURCE_ROOT; };
-		BF7876071DA5DFFF0009BDA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/StodoKitTests/Info.plist; sourceTree = SOURCE_ROOT; };
-		BF7876081DA5DFFF0009BDA2 /* ActionTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionTypeTests.swift; path = Source/StodoKitTests/ActionTypeTests.swift; sourceTree = SOURCE_ROOT; };
-		BF78760C1DA5E09C0009BDA2 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Source/StodoKit/Errors.swift; sourceTree = SOURCE_ROOT; };
 		BFC594B11DA7146A00F6D7DF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		BFC594B21DA7146A00F6D7DF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +156,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EDE5C691DFB7A5800550126 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				6EDE5C6A1DFB7A5800550126 /* Add.swift */,
+				6EDE5C6B1DFB7A5800550126 /* Delete.swift */,
+				6EDE5C6C1DFB7A5800550126 /* Done.swift */,
+				6EDE5C6D1DFB7A5800550126 /* List.swift */,
+				6EDE5C6E1DFB7A5800550126 /* Move.swift */,
+				6EDE5C6F1DFB7A5800550126 /* Rename.swift */,
+				6EDE5C701DFB7A5800550126 /* Reset.swift */,
+				6EDE5C711DFB7A5800550126 /* Undone.swift */,
+				6EDE5C721DFB7A5800550126 /* Version.swift */,
+			);
+			name = Commands;
+			path = Sources/stodo/Commands;
+			sourceTree = SOURCE_ROOT;
+		};
 		BF78757A1DA5B2650009BDA2 = {
 			isa = PBXGroup;
 			children = (
@@ -177,10 +197,10 @@
 		BF7875851DA5B2650009BDA2 /* stodo */ = {
 			isa = PBXGroup;
 			children = (
-				BF7875F81DA5DFDF0009BDA2 /* main.swift */,
-				BF7875C21DA5B8DF0009BDA2 /* Commands */,
-				BF7875F51DA5DFDF0009BDA2 /* Components.plist */,
-				BF7875F71DA5DFDF0009BDA2 /* Info.plist */,
+				6EDE5C691DFB7A5800550126 /* Commands */,
+				6EDE5C731DFB7A5800550126 /* Components.plist */,
+				6EDE5C741DFB7A5800550126 /* Info.plist */,
+				6EDE5C751DFB7A5800550126 /* main.swift */,
 			);
 			path = stodo;
 			sourceTree = "<group>";
@@ -188,12 +208,12 @@
 		BF7875991DA5B2950009BDA2 /* StodoKit */ = {
 			isa = PBXGroup;
 			children = (
-				BF78760C1DA5E09C0009BDA2 /* Errors.swift */,
-				BF7875FD1DA5DFF30009BDA2 /* FileType.swift */,
-				BF7875FF1DA5DFF30009BDA2 /* KeyedArchiver.swift */,
-				BF7876001DA5DFF30009BDA2 /* Stodo.swift */,
-				BF7876011DA5DFF30009BDA2 /* StodoKit.h */,
-				BF7875FE1DA5DFF30009BDA2 /* Info.plist */,
+				6EDE5C821DFB7A6900550126 /* Errors.swift */,
+				6EDE5C831DFB7A6900550126 /* FileType.swift */,
+				6EDE5C841DFB7A6900550126 /* Info.plist */,
+				6EDE5C851DFB7A6900550126 /* KeyedArchiver.swift */,
+				6EDE5C861DFB7A6900550126 /* Stodo.swift */,
+				6EDE5C871DFB7A6900550126 /* StodoKit.h */,
 			);
 			path = StodoKit;
 			sourceTree = "<group>";
@@ -201,10 +221,10 @@
 		BF7875A61DA5B2950009BDA2 /* StodoKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				BF044E1D1DA937150070F2BD /* TodoTests.swift */,
-				BF044E1C1DA937150070F2BD /* KeyedArchiverTests.swift */,
-				BF7876081DA5DFFF0009BDA2 /* ActionTypeTests.swift */,
-				BF7876071DA5DFFF0009BDA2 /* Info.plist */,
+				6EDE5C8E1DFB7A7800550126 /* ActionTypeTests.swift */,
+				6EDE5C8F1DFB7A7800550126 /* Info.plist */,
+				6EDE5C901DFB7A7800550126 /* KeyedArchiverTests.swift */,
+				6EDE5C911DFB7A7800550126 /* TodoTests.swift */,
 			);
 			path = StodoKitTests;
 			sourceTree = "<group>";
@@ -220,22 +240,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF7875C21DA5B8DF0009BDA2 /* Commands */ = {
-			isa = PBXGroup;
-			children = (
-				BF7875E91DA5DFD60009BDA2 /* Add.swift */,
-				BF7875EA1DA5DFD60009BDA2 /* Delete.swift */,
-				BF7875EB1DA5DFD60009BDA2 /* Done.swift */,
-				BF7875EC1DA5DFD60009BDA2 /* List.swift */,
-				BF044E101DA91A430070F2BD /* Move.swift */,
-				BF044E111DA91A430070F2BD /* Rename.swift */,
-				BF044E121DA91A430070F2BD /* Reset.swift */,
-				BF7875ED1DA5DFD60009BDA2 /* Undone.swift */,
-				BF7875EE1DA5DFD60009BDA2 /* Version.swift */,
-			);
-			name = Commands;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -243,7 +247,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF044E241DA9B3100070F2BD /* StodoKit.h in Headers */,
+				6EDE5C8D1DFB7A6900550126 /* StodoKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +369,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF7875F91DA5DFDF0009BDA2 /* Components.plist in Resources */,
+				6EDE5C7F1DFB7A5800550126 /* Components.plist in Resources */,
+				6EDE5C801DFB7A5800550126 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDE5C8A1DFB7A6900550126 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDE5C931DFB7A7800550126 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,16 +462,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF044E321DA9BB9E0070F2BD /* main.swift in Sources */,
-				BF044E291DA9BB700070F2BD /* Add.swift in Sources */,
-				BF044E2A1DA9BB700070F2BD /* Delete.swift in Sources */,
-				BF044E2B1DA9BB700070F2BD /* Done.swift in Sources */,
-				BF044E2C1DA9BB700070F2BD /* List.swift in Sources */,
-				BF044E2D1DA9BB700070F2BD /* Move.swift in Sources */,
-				BF044E2E1DA9BB700070F2BD /* Rename.swift in Sources */,
-				BF044E2F1DA9BB700070F2BD /* Reset.swift in Sources */,
-				BF044E301DA9BB700070F2BD /* Undone.swift in Sources */,
-				BF044E311DA9BB700070F2BD /* Version.swift in Sources */,
+				6EDE5C7D1DFB7A5800550126 /* Undone.swift in Sources */,
+				6EDE5C761DFB7A5800550126 /* Add.swift in Sources */,
+				6EDE5C811DFB7A5800550126 /* main.swift in Sources */,
+				6EDE5C771DFB7A5800550126 /* Delete.swift in Sources */,
+				6EDE5C7C1DFB7A5800550126 /* Reset.swift in Sources */,
+				6EDE5C781DFB7A5800550126 /* Done.swift in Sources */,
+				6EDE5C791DFB7A5800550126 /* List.swift in Sources */,
+				6EDE5C7A1DFB7A5800550126 /* Move.swift in Sources */,
+				6EDE5C7E1DFB7A5800550126 /* Version.swift in Sources */,
+				6EDE5C7B1DFB7A5800550126 /* Rename.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,10 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF78760D1DA5E09C0009BDA2 /* Errors.swift in Sources */,
-				BF7876041DA5DFF30009BDA2 /* KeyedArchiver.swift in Sources */,
-				BF7876051DA5DFF30009BDA2 /* Stodo.swift in Sources */,
-				BF7876021DA5DFF30009BDA2 /* FileType.swift in Sources */,
+				6EDE5C8B1DFB7A6900550126 /* KeyedArchiver.swift in Sources */,
+				6EDE5C891DFB7A6900550126 /* FileType.swift in Sources */,
+				6EDE5C881DFB7A6900550126 /* Errors.swift in Sources */,
+				6EDE5C8C1DFB7A6900550126 /* Stodo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,9 +490,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF044E1E1DA937150070F2BD /* KeyedArchiverTests.swift in Sources */,
-				BF044E1F1DA937150070F2BD /* TodoTests.swift in Sources */,
-				BF78760A1DA5DFFF0009BDA2 /* ActionTypeTests.swift in Sources */,
+				6EDE5C941DFB7A7800550126 /* KeyedArchiverTests.swift in Sources */,
+				6EDE5C921DFB7A7800550126 /* ActionTypeTests.swift in Sources */,
+				6EDE5C951DFB7A7800550126 /* TodoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +621,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Source/stodo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/stodo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @rpath/../Frameworks /Library/Frameworks/ /Library/Frameworks/StodoKit.framework/Versions/Current/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.stodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -635,7 +642,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Source/stodo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/stodo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @rpath/../Frameworks /Library/Frameworks/ /Library/Frameworks/StodoKit.framework/Versions/Current/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.stodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -660,7 +667,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/StodoKit/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/StodoKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.StodoKit;
@@ -690,7 +697,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/StodoKit/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/StodoKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.StodoKit;
@@ -713,7 +720,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Source/StodoKitTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/StodoKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				ORDER_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.StodoKitTests;
@@ -733,7 +740,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Source/StodoKitTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/StodoKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				ORDER_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixyzehn.StodoKitTests;
