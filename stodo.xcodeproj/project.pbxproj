@@ -17,16 +17,13 @@
 		6EDE5C7D1DFB7A5800550126 /* Undone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C711DFB7A5800550126 /* Undone.swift */; };
 		6EDE5C7E1DFB7A5800550126 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C721DFB7A5800550126 /* Version.swift */; };
 		6EDE5C7F1DFB7A5800550126 /* Components.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE5C731DFB7A5800550126 /* Components.plist */; };
-		6EDE5C801DFB7A5800550126 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE5C741DFB7A5800550126 /* Info.plist */; };
 		6EDE5C811DFB7A5800550126 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C751DFB7A5800550126 /* main.swift */; };
 		6EDE5C881DFB7A6900550126 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C821DFB7A6900550126 /* Errors.swift */; };
 		6EDE5C891DFB7A6900550126 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C831DFB7A6900550126 /* FileType.swift */; };
-		6EDE5C8A1DFB7A6900550126 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE5C841DFB7A6900550126 /* Info.plist */; };
 		6EDE5C8B1DFB7A6900550126 /* KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C851DFB7A6900550126 /* KeyedArchiver.swift */; };
 		6EDE5C8C1DFB7A6900550126 /* Stodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C861DFB7A6900550126 /* Stodo.swift */; };
 		6EDE5C8D1DFB7A6900550126 /* StodoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EDE5C871DFB7A6900550126 /* StodoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EDE5C921DFB7A7800550126 /* ActionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C8E1DFB7A7800550126 /* ActionTypeTests.swift */; };
-		6EDE5C931DFB7A7800550126 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDE5C8F1DFB7A7800550126 /* Info.plist */; };
 		6EDE5C941DFB7A7800550126 /* KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C901DFB7A7800550126 /* KeyedArchiverTests.swift */; };
 		6EDE5C951DFB7A7800550126 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5C911DFB7A7800550126 /* TodoTests.swift */; };
 		BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
@@ -322,7 +319,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Hiroki Nagasawa";
 				TargetAttributes = {
 					BF7875821DA5B2650009BDA2 = {
@@ -370,7 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EDE5C7F1DFB7A5800550126 /* Components.plist in Resources */,
-				6EDE5C801DFB7A5800550126 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +374,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EDE5C8A1DFB7A6900550126 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +381,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EDE5C931DFB7A7800550126 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +530,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -586,6 +581,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
