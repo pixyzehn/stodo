@@ -21,10 +21,16 @@ Available commands:
 ## Installation
 
 Install the `stodo` command line tool by running git clone for this repo followed by `make install` in the root directory.
-```
+```sh
 $ git clone git@github.com:pixyzehn/stodo.git
 $ carthage update --platform mac
 $ make install
+```
+or
+```sh
+$ git clone git@github.com:pixyzehn/stodo.git
+$ swift build
+$ ./.build/debug/stodo
 ```
 
 ## Usage
