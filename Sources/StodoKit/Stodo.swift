@@ -11,14 +11,14 @@ import Result
 
 public let stodoKitBundle = Bundle(for: Todo.self)
 
-public class Todo: NSObject, NSCoding {
+open class Todo: NSObject, NSCoding {
     public var id: Int = 0
     public var title: String = ""
     public var isDone: Bool = false
     public var createdAt: TimeInterval = 0
     public var updatedAt: TimeInterval = 0
 
-    init(id: Int, title: String, isDone: Bool = false) {
+    public init(id: Int, title: String, isDone: Bool = false) {
         super.init()
         self.id = id
         self.title = title
@@ -45,7 +45,7 @@ public class Todo: NSObject, NSCoding {
 }
 
 extension Todo {
-    static var savedTodos: [Todo] {
+    public static var savedTodos: [Todo] {
         get {
             let todos = KeyedArchiver.unarchive(path: fullPath)
             return todos
@@ -55,7 +55,7 @@ extension Todo {
         }
     }
 
-    static func contains(target: Int) -> Bool {
+    public static func contains(target: Int) -> Bool {
         let todos = savedTodos
         let ids = todos.map { $0.id }
         return ids.contains(target)

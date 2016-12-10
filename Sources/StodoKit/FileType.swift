@@ -16,15 +16,15 @@ public protocol FileType {
 }
 
 public extension FileType {
-    static var fileManager: FileManager {
+    public static var fileManager: FileManager {
         return FileManager.default
     }
 
-    static var fileName: String {
+    public static var fileName: String {
         return ".stodo"
     }
 
-    static var fullPath: String {
+    public static var fullPath: String {
         return rootURL.path
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import Quick
 import Nimble
-@testable import StodoKit
+import StodoKit
 
 class KeyedArchiverTests: QuickSpec {
     override func spec() {
