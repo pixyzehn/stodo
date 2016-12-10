@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF78759F1DA5B2950009BDA2"
-               BuildableName = "StodoKitTests.xctest"
-               BlueprintName = "StodoKitTests"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:stodo.xcodeproj">
             </BuildableReference>
          </TestableReference>
