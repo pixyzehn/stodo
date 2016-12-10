@@ -33,10 +33,6 @@
 		BF7875BA1DA5B3700009BDA2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; };
 		BFC594B31DA7146A00F6D7DF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; };
 		BFC594B41DA7146A00F6D7DF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC594B21DA7146A00F6D7DF /* Quick.framework */; };
-		BFC594BB1DA71D1D00F6D7DF /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BFC594BC1DA71D1D00F6D7DF /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC594B21DA7146A00F6D7DF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BFC594BD1DA71D1D00F6D7DF /* Commandant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BFC594BE1DA71D1D00F6D7DF /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +42,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = BF7875971DA5B2950009BDA2;
 			remoteInfo = StodoKit;
-		};
-		BF7875A41DA5B2950009BDA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF78757B1DA5B2650009BDA2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF7875821DA5B2650009BDA2;
-			remoteInfo = stodo;
 		};
 		BF7875AB1DA5B2950009BDA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -73,19 +62,6 @@
 				BF7875AE1DA5B2950009BDA2 /* StodoKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFC594BA1DA71D1200F6D7DF /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				BFC594BB1DA71D1D00F6D7DF /* Nimble.framework in CopyFiles */,
-				BFC594BC1DA71D1D00F6D7DF /* Quick.framework in CopyFiles */,
-				BFC594BD1DA71D1D00F6D7DF /* Commandant.framework in CopyFiles */,
-				BFC594BE1DA71D1D00F6D7DF /* Result.framework in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -260,7 +236,6 @@
 				BF7875801DA5B2650009BDA2 /* Frameworks */,
 				BF7875811DA5B2650009BDA2 /* Resources */,
 				BF7875B21DA5B2950009BDA2 /* Embed Frameworks */,
-				BF7875C11DA5B6630009BDA2 /* carthage copy-frameworks */,
 				BF7875E81DA5DE7B0009BDA2 /* Run SwiftLint */,
 			);
 			buildRules = (
@@ -281,7 +256,6 @@
 				BF7875941DA5B2950009BDA2 /* Frameworks */,
 				BF7875951DA5B2950009BDA2 /* Headers */,
 				BF7875961DA5B2950009BDA2 /* Resources */,
-				BF7875C01DA5B5740009BDA2 /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,16 +271,13 @@
 			buildConfigurationList = BF7875B31DA5B2950009BDA2 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				BF78759C1DA5B2950009BDA2 /* Sources */,
-				BFC594BA1DA71D1200F6D7DF /* CopyFiles */,
 				BF78759D1DA5B2950009BDA2 /* Frameworks */,
 				BF78759E1DA5B2950009BDA2 /* Resources */,
-				BFC594B61DA7199E00F6D7DF /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				BF7875A31DA5B2950009BDA2 /* PBXTargetDependency */,
-				BF7875A51DA5B2950009BDA2 /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = StodoKitTests;
@@ -388,38 +359,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BF7875C01DA5B5740009BDA2 /* carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Commandant.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Result.framework",
-			);
-			name = "carthage copy-frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		BF7875C11DA5B6630009BDA2 /* carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Commandant.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Result.framework",
-			);
-			name = "carthage copy-frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		BF7875E81DA5DE7B0009BDA2 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,22 +372,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		BFC594B61DA7199E00F6D7DF /* carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Nimble.framework",
-			);
-			name = "carthage copy-frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -498,11 +421,6 @@
 			isa = PBXTargetDependency;
 			target = BF7875971DA5B2950009BDA2 /* StodoKit */;
 			targetProxy = BF7875A21DA5B2950009BDA2 /* PBXContainerItemProxy */;
-		};
-		BF7875A51DA5B2950009BDA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF7875821DA5B2650009BDA2 /* stodo */;
-			targetProxy = BF7875A41DA5B2950009BDA2 /* PBXContainerItemProxy */;
 		};
 		BF7875AC1DA5B2950009BDA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
