@@ -26,6 +26,10 @@
 		6EDE5CAA1DFB87C500550126 /* ActionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5CA61DFB87C500550126 /* ActionTypeTests.swift */; };
 		6EDE5CAC1DFB87C500550126 /* KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5CA81DFB87C500550126 /* KeyedArchiverTests.swift */; };
 		6EDE5CAD1DFB87C500550126 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE5CA91DFB87C500550126 /* TodoTests.swift */; };
+		6EDE5CC21DFBE76100550126 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC594B11DA7146A00F6D7DF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EDE5CC31DFBE76100550126 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC594B21DA7146A00F6D7DF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EDE5CC61DFBE93900550126 /* Commandant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B71DA5B3700009BDA2 /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EDE5CC71DFBE93D00550126 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF7875B81DA5B3700009BDA2 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF7875A11DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AD1DA5B2950009BDA2 /* StodoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; };
 		BF7875AE1DA5B2950009BDA2 /* StodoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF7875981DA5B2950009BDA2 /* StodoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -36,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6EDE5CC41DFBE81300550126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF78757B1DA5B2650009BDA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF7875821DA5B2650009BDA2;
+			remoteInfo = stodo;
+		};
 		BF7875A21DA5B2950009BDA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF78757B1DA5B2650009BDA2 /* Project object */;
@@ -53,6 +64,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6EDE5CC11DFBE75000550126 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6EDE5CC71DFBE93D00550126 /* Result.framework in CopyFiles */,
+				6EDE5CC61DFBE93900550126 /* Commandant.framework in CopyFiles */,
+				6EDE5CC21DFBE76100550126 /* Nimble.framework in CopyFiles */,
+				6EDE5CC31DFBE76100550126 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF7875B21DA5B2950009BDA2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,6 +295,7 @@
 			buildConfigurationList = BF7875B31DA5B2950009BDA2 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				BF78759C1DA5B2950009BDA2 /* Sources */,
+				6EDE5CC11DFBE75000550126 /* CopyFiles */,
 				BF78759D1DA5B2950009BDA2 /* Frameworks */,
 				BF78759E1DA5B2950009BDA2 /* Resources */,
 			);
@@ -278,6 +303,7 @@
 			);
 			dependencies = (
 				BF7875A31DA5B2950009BDA2 /* PBXTargetDependency */,
+				6EDE5CC51DFBE81300550126 /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = StodoKitTests;
@@ -417,6 +443,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6EDE5CC51DFBE81300550126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF7875821DA5B2650009BDA2 /* stodo */;
+			targetProxy = 6EDE5CC41DFBE81300550126 /* PBXContainerItemProxy */;
+		};
 		BF7875A31DA5B2950009BDA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF7875971DA5B2950009BDA2 /* StodoKit */;
