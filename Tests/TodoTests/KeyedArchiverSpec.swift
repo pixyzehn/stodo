@@ -11,7 +11,7 @@ import Quick
 import Nimble
 import StodoKit
 
-class KeyedArchiverTests: QuickSpec {
+class KeyedArchiverSpec: QuickSpec {
     override func spec() {
         describe("KeyedArchiver") {
             var todos: [Todo] = []

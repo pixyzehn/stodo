@@ -13,7 +13,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B9DBDA52-9D26-4C66-BD52-EC5DA1DF9D55",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "95438028B10BBB846574013D29F154A00556A9D1" : "stodo\/Carthage\/Checkouts\/Quick\/Externals\/Nimble\/",
+    "95438028B10BBB846574013D29F154A00556A9D1" : "stodo\/Carthage\/Checkouts\/Nimble\/",
     "F066367FB407AE3082ACE9557C8CC518DD02ED7A" : "stodo\/",
     "D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64" : "stodo\/Carthage\/Checkouts\/Quick\/",
     "E084C86B03F81D63323C9E7510697EA528A758C7" : "stodo\/Carthage\/Checkouts\/Commandant\/Carthage\/Checkouts\/xcconfigs\/",

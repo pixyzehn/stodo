@@ -11,7 +11,7 @@ import Quick
 import Nimble
 import StodoKit
 
-class ActionTypeTests: QuickSpec {
+class ActionTypeSpec: QuickSpec {
     override func spec() {
         var target: Int!
         beforeEach {
