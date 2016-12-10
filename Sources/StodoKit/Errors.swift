@@ -6,6 +6,8 @@
 //  Copyright © 2016 Hiroki Nagasawa. All rights reserved.
 //
 
+import Foundation
+
 public enum StodoError: Error {
     case addError(failureReason: String)
     case deleteError(failureReason: String)
