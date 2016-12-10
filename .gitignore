@@ -27,3 +27,7 @@ Carthage/Build
 *.pkg
 *.zip
 *.coverage.txt
+
+# Swift Package Manager
+Packages/
+.build/
