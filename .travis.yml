@@ -4,6 +4,8 @@ env:
 before_install:
   - brew unlink swiftlint
   - brew install swiftlint
+before_script:
+  - bundle exec danger
 install:
   - carthage update --platform mac
 matrix:
