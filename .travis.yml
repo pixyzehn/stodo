@@ -1,9 +1,12 @@
+notifications:
+  email: false
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
 before_install:
   - brew unlink swiftlint
   - brew install swiftlint
+  - bundle install
 before_script:
   - bundle exec danger
 install:
