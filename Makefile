@@ -24,16 +24,16 @@ BINARIES_FOLDER=/usr/local/bin
 
 VERSION_STRING=$(shell agvtool what-marketing-version -terse1)
 
-.PHONY: all clean install package test uninstall
+.PHONY: all bootstrap clean install package test uninstall
 
-all:
+all: bootstrap
 	$(BUILD_TOOL) $(XCODEFLAGS) build
 
 bootstrap:
 	git submodule update --init --recursive
 	carthage update --platform macOS
 
-test: clean
+test: clean bootstrap
 	$(BUILD_TOOL) $(XCODEFLAGS) test
 
 clean:
