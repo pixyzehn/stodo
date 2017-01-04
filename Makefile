@@ -31,7 +31,7 @@ all:
 
 bootstrap:
 	git submodule update --init --recursive
-	# carthage update --platform macOS
+	carthage update --platform macOS
 
 test: clean
 	$(BUILD_TOOL) $(XCODEFLAGS) test
