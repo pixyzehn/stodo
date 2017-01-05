@@ -24,16 +24,16 @@ BINARIES_FOLDER=/usr/local/bin
 
 VERSION_STRING=$(shell agvtool what-marketing-version -terse1)
 
-.PHONY: all clean install package test uninstall
+.PHONY: all bootstrap clean install package test uninstall
 
-all:
+all: bootstrap
 	$(BUILD_TOOL) $(XCODEFLAGS) build
 
 bootstrap:
 	git submodule update --init --recursive
 	carthage update --platform macOS
 
-test: clean
+test: clean bootstrap
 	$(BUILD_TOOL) $(XCODEFLAGS) test
 
 clean:
@@ -59,7 +59,7 @@ installables: clean bootstrap
 
 prefix_install: installables
 	mkdir -p "$(PREFIX)/Frameworks" "$(PREFIX)/bin"
-	cp -ff "$(TEMPORARY_FOLDER)$(FRAMEWORKS_FOLDER)/$(OUTPUT_FRAMEWORK)" "$(PREFIX)/Frameworks/"
+	cp -rf "$(TEMPORARY_FOLDER)$(FRAMEWORKS_FOLDER)/$(OUTPUT_FRAMEWORK)" "$(PREFIX)/Frameworks/"
 	cp -f "$(TEMPORARY_FOLDER)$(BINARIES_FOLDER)/$(EXECUTABLE_NAME)" "$(PREFIX)/bin/"
 	install_name_tool -add_rpath "@executable_path/../Frameworks/$(OUTPUT_FRAMEWORK)/Versions/Current/Frameworks/"  "$(PREFIX)/bin/$(EXECUTABLE_NAME)"
 
