@@ -18,13 +18,25 @@ Available commands:
 
 ## Installation
 
+### Homebrew
+
+Install the `stodo` command line tool by Homebrew
+```sh
+$ brew install pixyzehn/stodo/stodo
+```
+
+### Makefile
+
 Install the `stodo` command line tool by running git clone for this repo followed by `make install` in the root directory.
 ```sh
 $ git clone git@github.com:pixyzehn/stodo.git
 $ carthage update --platform mac
 $ make install
 ```
-or
+
+### SwiftPM
+
+You can use SwiftPM for installation.
 ```sh
 $ git clone git@github.com:pixyzehn/stodo.git
 $ swift build
@@ -163,9 +175,6 @@ None.
 $ stodo version
 ```
 Show the current version.
-
-### Todo
-- Setting .stodo file path. (default path is HOME)
 
 ## Author
 [pixyzehn](https://github.com/pixyzehn)
