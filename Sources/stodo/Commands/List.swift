@@ -59,7 +59,8 @@ public struct ListCommand: CommandProtocol {
                     let space = maxTitleLength - todo.title.characters.count + 1
                     let spaceString = String(repeating: " ", count: space)
                     output += todo.updatedAt == 0 ?
-                        "\(spaceString) | \(todo.createdAt.toDateString())" : "\(spaceString) | \(todo.updatedAt.toDateString())"
+                        "\(spaceString) | \(todo.createdAt.toDateString())"
+                        : "\(spaceString) | \(todo.updatedAt.toDateString())"
                 }
 
                 print("\(output)")

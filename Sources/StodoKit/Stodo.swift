@@ -26,6 +26,7 @@ open class Todo: NSObject, NSCoding {
         self.createdAt = Date().timeIntervalSince1970
     }
 
+    // swiftlint:disable force_cast
     public required init?(coder aDecoder: NSCoder) {
         super.init()
         self.id = aDecoder.decodeInteger(forKey: "id")
