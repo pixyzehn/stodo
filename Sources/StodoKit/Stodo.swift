@@ -12,23 +12,22 @@ import Result
 public let stodoKitBundle = Bundle(for: Todo.self)
 
 open class Todo: NSObject, NSCoding {
-    public var id: Int = 0
-    public var title: String = ""
-    public var isDone: Bool = false
-    public var createdAt: TimeInterval = 0
-    public var updatedAt: TimeInterval = 0
+    public var id: Int
+    public var title: String
+    public var isDone: Bool
+    public var createdAt: TimeInterval
+    public var updatedAt: TimeInterval
 
     public init(id: Int, title: String, isDone: Bool = false) {
-        super.init()
         self.id = id
         self.title = title
         self.isDone = isDone
         self.createdAt = Date().timeIntervalSince1970
+        self.updatedAt = Date().timeIntervalSince1970
     }
 
     // swiftlint:disable force_cast
     public required init?(coder aDecoder: NSCoder) {
-        super.init()
         self.id = aDecoder.decodeInteger(forKey: "id")
         self.title = aDecoder.decodeObject(forKey: "title") as! String
         self.isDone = aDecoder.decodeBool(forKey: "isdone")
