@@ -58,7 +58,7 @@ public struct ListCommand: CommandProtocol {
                 if options.isShowedTime {
                     let space = maxTitleLength - todo.title.characters.count + 1
                     let spaceString = String(repeating: " ", count: space)
-                    output += todo.updatedAt == 0 ?
+                    output += todo.createdAt == todo.updatedAt ?
                         "\(spaceString) | \(todo.createdAt.toDateString())"
                         : "\(spaceString) | \(todo.updatedAt.toDateString())"
                 }
