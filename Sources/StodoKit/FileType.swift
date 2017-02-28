@@ -17,7 +17,7 @@ public protocol FileType {
 
 public extension FileType {
     public static var fileManager: FileManager {
-        return FileManager.default
+        return .default
     }
 
     public static var fileName: String {
