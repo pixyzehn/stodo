@@ -22,8 +22,9 @@ open class Todo: NSObject, NSCoding {
         self.id = id
         self.title = title
         self.isDone = isDone
-        self.createdAt = Date().timeIntervalSince1970
-        self.updatedAt = Date().timeIntervalSince1970
+        let now = Date().timeIntervalSince1970
+        self.createdAt = now
+        self.updatedAt = now
     }
 
     // swiftlint:disable force_cast
