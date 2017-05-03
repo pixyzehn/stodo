@@ -30,7 +30,7 @@ $ brew install pixyzehn/stodo/stodo
 Install the `stodo` command line tool by running git clone for this repo followed by `make install` in the root directory.
 ```sh
 $ git clone git@github.com:pixyzehn/stodo.git
-$ carthage update --platform mac
+$ carthage bootstrap --platform macOS --use-submodules
 $ make install
 ```
 
