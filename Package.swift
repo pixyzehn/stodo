@@ -8,7 +8,7 @@ let package = Package(
               dependencies: [.Target(name: "StodoKit")]),
     ],
     dependencies: [
-        .Package(url: "https://github.com/Carthage/Commandant.git", versions: Version(0, 11, 3)..<Version(0, 11, .max)),
+        .Package(url: "https://github.com/Carthage/Commandant.git", versions: Version(0, 12, 0)..<Version(0, 12, .max)),
     ]
 )
 
