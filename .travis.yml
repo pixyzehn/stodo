@@ -10,12 +10,12 @@ before_install:
 before_script:
   - bundle exec danger
 install:
-  - carthage update --platform mac
+  - carthage bootstrap --platform macOS --use-submodules
 matrix:
   include:
   - os: osx
     language: objective-c
-    osx_image: xcode8
+    osx_image: xcode8.3
     script:
     - swiftlint
     - set -o pipefail && xcodebuild clean build test -project stodo.xcodeproj -scheme stodo -destination 'platform=macOS'
