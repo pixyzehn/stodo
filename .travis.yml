@@ -18,6 +18,6 @@ matrix:
     osx_image: xcode8.3
     script:
     - swiftlint
-    - set -o pipefail && xcodebuild clean build test -project stodo.xcodeproj -scheme stodo -destination 'platform=macOS'
+    - set -o pipefail && xcodebuild test -project stodo.xcodeproj -scheme stodo -destination 'platform=macOS' | xcpretty --color
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'stodo'
