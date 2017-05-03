@@ -6,6 +6,7 @@
 //  Copyright © 2016 Hiroki Nagasawa. All rights reserved.
 //
 
+import Foundation
 import Commandant
 import StodoKit
 
