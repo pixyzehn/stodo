@@ -30,7 +30,7 @@ all: bootstrap
 	$(BUILD_TOOL) $(XCODEFLAGS) build
 
 bootstrap:
-	git submodule update --init --recursive
+	git submodule update --init
 	carthage bootstrap --platform macOS --use-submodules
 
 test: clean bootstrap
