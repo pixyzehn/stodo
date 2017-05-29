@@ -108,7 +108,6 @@
 		6EDE5CA71DFB87C500550126 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/TodoTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		6EDE5CA81DFB87C500550126 /* KeyedArchiverSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyedArchiverSpec.swift; path = Tests/TodoTests/KeyedArchiverSpec.swift; sourceTree = SOURCE_ROOT; };
 		6EDE5CA91DFB87C500550126 /* TodoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoTests.swift; path = Tests/TodoTests/TodoTests.swift; sourceTree = SOURCE_ROOT; };
-		6EDE5CD41DFBF1FF00550126 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = Tests/LinuxMain.swift; sourceTree = SOURCE_ROOT; };
 		BF7875831DA5B2650009BDA2 /* stodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7875981DA5B2950009BDA2 /* StodoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StodoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7875A01DA5B2950009BDA2 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,7 +215,6 @@
 		BF7875A61DA5B2950009BDA2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6EDE5CD41DFBF1FF00550126 /* LinuxMain.swift */,
 				6EDE5CA61DFB87C500550126 /* ActionTypeSpec.swift */,
 				6EDE5CA71DFB87C500550126 /* Info.plist */,
 				6EDE5CA81DFB87C500550126 /* KeyedArchiverSpec.swift */,

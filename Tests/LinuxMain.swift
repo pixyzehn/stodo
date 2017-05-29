@@ -5,5 +5,5 @@ import Quick
 
 Quick.QCKMain([
     ActionTypeSpec.self,
-    KeyedArchiverSpec.self,
+    KeyedArchiverSpec.self
 ])

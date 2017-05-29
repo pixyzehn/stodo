@@ -1,6 +1,16 @@
+disabled_rules:
+  - cyclomatic_complexity
+  - function_body_length
+
 included:
   - Sources
-variable_name:
+  - Tests
+
+excluded:
+  - Carthage
+  - Packages
+
+identifier_name:
   excluded:
     - m
     - id

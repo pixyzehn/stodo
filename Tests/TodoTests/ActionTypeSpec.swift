@@ -28,7 +28,7 @@ class ActionTypeSpec: QuickSpec {
             it("add a new task") {
                 let sum = TodoTests.savedTodos.count
                 switch TodoTests.add(title: "test4") {
-                case .success():
+                case .success:
                     expect(TodoTests.savedTodos.count).to(equal(sum + 1))
                 case .failure(let error):
                     print("\(error)")
@@ -37,7 +37,7 @@ class ActionTypeSpec: QuickSpec {
 
             it("delete a task") {
                 switch TodoTests.delete(at: target) {
-                case .success():
+                case .success:
                     expect(TodoTests.get(id: target)).to(beNil())
                 case .failure(let error):
                     print("\(error)")
@@ -49,7 +49,7 @@ class ActionTypeSpec: QuickSpec {
                 expect(todo.isDone).to(beFalse())
 
                 switch TodoTests.done(at: todo.id) {
-                case .success():
+                case .success:
                     if let todo = TodoTests.get(id: target) {
                         expect(todo.isDone).to(beTrue())
                     } else {
@@ -75,7 +75,7 @@ class ActionTypeSpec: QuickSpec {
                 expect(TodoTests.savedTodos[0].id).to(equal(fromTarget))
                 expect(TodoTests.savedTodos[1].id).to(equal(toTarget))
                 switch TodoTests.move(from: fromTarget, to: toTarget) {
-                case .success(_):
+                case .success:
                     expect(TodoTests.savedTodos[0].id).to(equal(toTarget))
                     expect(TodoTests.savedTodos[1].id).to(equal(fromTarget))
                 case .failure(let error):
@@ -86,7 +86,7 @@ class ActionTypeSpec: QuickSpec {
             it("reneme task") {
                 expect(TodoTests.savedTodos[0].title).to(equal("todo_test_1"))
                 switch TodoTests.rename(at: target, name: "updated_todo_test_1") {
-                case .success(_):
+                case .success:
                     expect(TodoTests.savedTodos[0].title).to(equal("updated_todo_test_1"))
                 case .failure(let error):
                     print("\(error)")
@@ -96,7 +96,7 @@ class ActionTypeSpec: QuickSpec {
             it("reset all tasks") {
                 expect(TodoTests.savedTodos.count).to(equal(3))
                 switch TodoTests.reset() {
-                case .success(_):
+                case .success:
                     expect(TodoTests.savedTodos.count).to(equal(0))
                 case .failure(let error):
                     print("\(error)")
@@ -105,7 +105,7 @@ class ActionTypeSpec: QuickSpec {
 
             it("undone a task") {
                 switch TodoTests.done(at: target) {
-                case .success(_):
+                case .success:
                     if let todo = TodoTests.get(id: target) {
                         expect(todo.isDone).to(beTrue())
                     } else {
@@ -113,7 +113,7 @@ class ActionTypeSpec: QuickSpec {
                     }
 
                     switch TodoTests.undone(at: target) {
-                    case .success():
+                    case .success:
                         if let todo = TodoTests.get(id: target) {
                             expect(todo.isDone).to(beFalse())
                         } else {
