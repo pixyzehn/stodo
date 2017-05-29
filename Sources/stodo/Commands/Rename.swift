@@ -37,7 +37,7 @@ public struct RenameCommand: CommandProtocol {
 
     public func run(_ options: RenameOptions) -> Result<(), ClientError> {
         switch Todo.rename(at: options.target, name: options.name) {
-        case .success(_):
+        case .success:
             _ = ListCommand().run(ListOptions())
             return .success()
         case .failure(let error):

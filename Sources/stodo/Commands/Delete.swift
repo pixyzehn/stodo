@@ -33,7 +33,7 @@ public struct DeleteCommand: CommandProtocol {
 
     public func run(_ options: Options) -> Result<(), ClientError> {
         switch Todo.delete(at: options.target) {
-        case .success(_):
+        case .success:
             _ = ListCommand().run(ListOptions())
             return .success()
         case .failure(let error):

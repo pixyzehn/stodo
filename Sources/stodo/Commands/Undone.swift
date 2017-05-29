@@ -33,7 +33,7 @@ public struct UndoneCommand: CommandProtocol {
 
     public func run(_ options: Options) -> Result<(), ClientError> {
         switch Todo.undone(at: options.target) {
-        case .success(_):
+        case .success:
             _ = ListCommand().run(ListOptions())
             return .success()
         case .failure(let error):

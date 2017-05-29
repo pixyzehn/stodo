@@ -37,7 +37,7 @@ public struct MoveCommand: CommandProtocol {
 
     public func run(_ options: MoveOptions) -> Result<(), ClientError> {
         switch Todo.move(from: options.fromId, to: options.toId) {
-        case .success(_):
+        case .success:
             _ = ListCommand().run(ListOptions())
             return .success()
         case .failure(let error):

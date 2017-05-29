@@ -19,7 +19,7 @@ public struct ResetCommand: CommandProtocol {
 
     public func run(_ options: Options) -> Result<(), ClientError> {
         switch Todo.reset() {
-        case .success(_):
+        case .success:
             _ = ListCommand().run(ListOptions())
             return .success()
         case .failure(let error):
