@@ -1,3 +1,5 @@
+**Notice: stodo is no longer being maintained/updated.**
+
 # stodo [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
 
 ```
